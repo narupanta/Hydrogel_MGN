@@ -119,7 +119,7 @@ class EncodeProcessDecode(torch.nn.Module):
                         
     
     def encoder(self, graph) :
-        node_features = self._build_node_latent_features(graph.node_type, graph.displacement, graph.chem_pot)
+        node_features = self._build_node_latent_features(graph)
         mesh_edge_features = self._build_mesh_edge_features(graph.mesh_pos, graph.displacement, graph.chem_pot, graph.senders, graph.receivers)    
         
         node_latents = self.node_encode_net(self._node_features_normalizer(node_features))          
@@ -201,10 +201,10 @@ class EncodeProcessDecode(torch.nn.Module):
         self._node_features_normalizer = torch.load(os.path.join(path, "node_features_normalizer.pth"))
         self._mesh_edge_normalizer = torch.load(os.path.join(path, "mesh_edge_features_normalizer.pth"))
     
-    def _build_node_latent_features(self, node_type, displacement_field, chem_pot_field) :
-        node_type_onehot = F.one_hot(node_type).to(torch.float)
+    def _build_node_latent_features(self, graph) :
+        node_type_onehot = F.one_hot(graph.node_type).to(torch.float)
         node_latent_features = torch.cat(
-            (displacement_field, chem_pot_field, node_type_onehot), 
+            (graph.displacement, graph.chem_pot, graph.mat_param_A, graph.mat_param_lambda,node_type_onehot), 
             dim = -1
             )
         return node_latent_features

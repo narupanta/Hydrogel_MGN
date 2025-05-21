@@ -33,8 +33,7 @@ if __name__ == "__main__" :
     logger = logging.getLogger()
     time_window = 1
     dataset = HydrogelDataset(data_dir, add_targets= True, split_frames=True, add_noise = True, time_window = time_window)
-    data = dataset[0]
-    model = EncodeProcessDecode(node_feature_size = 5,
+    model = EncodeProcessDecode(node_feature_size = 7,
                                 mesh_edge_feature_size = 7,
                                 output_size = 3,
                                 latent_size = 128,
@@ -44,15 +43,17 @@ if __name__ == "__main__" :
                                 message_passing_steps = 15)
     model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=5e-3)
-    num_epochs = 100
+    num_epochs = 20
+    traj_pass = 5
     train_loss_per_epochs = []
     is_accumulate_normalizer_phase = True
     best_val_loss = float('inf')
     for epoch in range(num_epochs):
         model.train()
-        train_total_loss, train_disp_loss, train_chem_loss = 0, 0, 0
+        train_total_loss = 0
         val_total_loss, val_disp_loss, val_chem_loss = 0, 0, 0
         for traj_idx, trajectory in enumerate(dataset):  # assuming dataset.trajectories exists
+            traj_total_loss, traj_disp_loss, traj_chem_loss = 0, 0, 0
             train_loader = DataLoader(trajectory, batch_size=1, shuffle=True)
             loop = tqdm(enumerate(train_loader), total=len(train_loader), leave=False)
 
@@ -65,23 +66,28 @@ if __name__ == "__main__" :
                 if not is_accumulate_normalizer_phase:
                     total_loss.backward()
                     optimizer.step()
-                    train_total_loss += total_loss.item()
-                    train_disp_loss += disp_loss.item()
-                    train_chem_loss += chem_loss.item()
+                    traj_total_loss += total_loss.item()
+                    traj_disp_loss += disp_loss.item()
+                    traj_chem_loss += chem_loss.item()
                     loop.set_description(f"Epoch {epoch + 1} Traj {traj_idx + 1}/{len(dataset)}")
                     loop.set_postfix({"Total Loss": f"{total_loss.item():.4f}",
                                       "Total Disp Loss": f"{disp_loss.item():.4f}",
                                       "Total Chem Loss": f"{chem_loss.item():.4f}"})
-            if not is_accumulate_normalizer_phase:
+            if (traj_pass > 0) & is_accumulate_normalizer_phase:
+                traj_pass -= 1
+            else :
+                is_accumulate_normalizer_phase = False
+            train_total_loss += traj_total_loss
+            logger.info(f"Epoch {epoch+1}, Trajectory {traj_idx+1}: Train Total Loss: {traj_total_loss:.4f}, Train Disp Loss: {traj_disp_loss:.4f}, Train Chem Loss: {traj_chem_loss:.4f}")
+        if not is_accumulate_normalizer_phase:
+                # pass
+            for traj_idx, trajectory in enumerate(dataset):
                 output = rollout(model, trajectory, time_window)
                 val_disp_loss = torch.mean(output['disp_mse'])
                 val_chem_loss = torch.mean(output['chem_pot_mse'])
                 val_total_loss += val_disp_loss + val_chem_loss
-                logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_total_loss:.6f}, Rollout Disp MSE = {val_total_loss:.6f}, Rollout Chem MSE = {val_total_loss:.6f}")
-            else:
-                is_accumulate_normalizer_phase = False
-        logger.info(f"Epoch {epoch+1}, Trajectory {traj_idx+1}: Train Total Loss: {train_total_loss:.4f}, Train Disp Loss: {train_disp_loss:.4f}, Train Chem Loss: {train_chem_loss:.4f}")
-        if not is_accumulate_normalizer_phase:
+                logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_total_loss:.6f}, Rollout Disp MSE = {val_disp_loss:.6f}, Rollout Chem MSE = {val_chem_loss:.6f}")
+
             avg_train_loss = train_total_loss / len(dataset)
             avg_rollout_loss = val_total_loss / len(dataset)
             train_loss_per_epochs.append(avg_train_loss)

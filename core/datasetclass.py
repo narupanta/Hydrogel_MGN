@@ -34,6 +34,8 @@ class HydrogelDataset(Dataset):
         displacement = torch.tensor(data["displacement_list"], dtype=torch.float)
         chem_pot = torch.tensor(data["chem_pot_list"], dtype=torch.float).unsqueeze(-1)
         mesh_pos = torch.tensor(data["mesh_pos"], dtype=torch.float)
+        mat_param_lambda = torch.tensor(data["mat_param_lambda"], dtype=torch.float).unsqueeze(-1)
+        mat_param_A = torch.tensor(data["mat_param_A"], dtype=torch.float).unsqueeze(-1)
         cells = torch.tensor(data['node_connectivity'])
         node_type = torch.tensor(data["node_type"], dtype = torch.long)
         # edge_index = torch.cat((decomposed_connectivity[0].reshape(1, -1), decomposed_connectivity[1].reshape(1, -1)), dim=0)
@@ -64,7 +66,9 @@ class HydrogelDataset(Dataset):
                              senders = senders, 
                              receivers = receivers, 
                              cells = cells,
-                             node_type = node_type)
+                             node_type = node_type,
+                             mat_param_lambda = mat_param_lambda,
+                             mat_param_A = mat_param_A)
                 frames.append(frame)
             return frames
 
