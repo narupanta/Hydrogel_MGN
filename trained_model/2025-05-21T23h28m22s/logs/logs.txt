@@ -1,0 +1,689 @@
+2025-05-21 23:28:24,859 - Epoch 1, Trajectory 1: Train Total Loss: 0.0000, Train Disp Loss: 0.0000, Train Chem Loss: 0.0000
+2025-05-21 23:28:25,929 - Epoch 1, Trajectory 2: Train Total Loss: 0.0000, Train Disp Loss: 0.0000, Train Chem Loss: 0.0000
+2025-05-21 23:28:27,002 - Epoch 1, Trajectory 3: Train Total Loss: 0.0000, Train Disp Loss: 0.0000, Train Chem Loss: 0.0000
+2025-05-21 23:28:28,081 - Epoch 1, Trajectory 4: Train Total Loss: 0.0000, Train Disp Loss: 0.0000, Train Chem Loss: 0.0000
+2025-05-21 23:28:29,157 - Epoch 1, Trajectory 5: Train Total Loss: 0.0000, Train Disp Loss: 0.0000, Train Chem Loss: 0.0000
+2025-05-21 23:28:30,233 - Epoch 1, Trajectory 6: Train Total Loss: 0.0000, Train Disp Loss: 0.0000, Train Chem Loss: 0.0000
+2025-05-21 23:28:33,919 - Epoch 1, Trajectory 7: Train Total Loss: 206.1746, Train Disp Loss: 152.4033, Train Chem Loss: 53.7713
+2025-05-21 23:28:37,225 - Epoch 1, Trajectory 8: Train Total Loss: 174.9705, Train Disp Loss: 129.3815, Train Chem Loss: 45.5890
+2025-05-21 23:28:40,533 - Epoch 1, Trajectory 9: Train Total Loss: 165.6283, Train Disp Loss: 121.7549, Train Chem Loss: 43.8734
+2025-05-21 23:28:43,841 - Epoch 1, Trajectory 10: Train Total Loss: 155.3539, Train Disp Loss: 112.9294, Train Chem Loss: 42.4246
+2025-05-21 23:28:47,154 - Epoch 1, Trajectory 11: Train Total Loss: 233.1375, Train Disp Loss: 129.6408, Train Chem Loss: 103.4967
+2025-05-21 23:28:50,461 - Epoch 1, Trajectory 12: Train Total Loss: 203.3420, Train Disp Loss: 128.6593, Train Chem Loss: 74.6828
+2025-05-21 23:28:53,781 - Epoch 1, Trajectory 13: Train Total Loss: 194.8652, Train Disp Loss: 133.2996, Train Chem Loss: 61.5656
+2025-05-21 23:28:57,089 - Epoch 1, Trajectory 14: Train Total Loss: 193.8786, Train Disp Loss: 139.0967, Train Chem Loss: 54.7819
+2025-05-21 23:29:00,402 - Epoch 1, Trajectory 15: Train Total Loss: 192.7327, Train Disp Loss: 142.0018, Train Chem Loss: 50.7308
+2025-05-21 23:29:03,713 - Epoch 1, Trajectory 16: Train Total Loss: 191.2748, Train Disp Loss: 143.6659, Train Chem Loss: 47.6089
+2025-05-21 23:29:07,027 - Epoch 1, Trajectory 17: Train Total Loss: 191.7048, Train Disp Loss: 146.3253, Train Chem Loss: 45.3795
+2025-05-21 23:29:10,330 - Epoch 1, Trajectory 18: Train Total Loss: 190.2415, Train Disp Loss: 146.5343, Train Chem Loss: 43.7072
+2025-05-21 23:29:13,644 - Epoch 1, Trajectory 19: Train Total Loss: 185.6373, Train Disp Loss: 142.9379, Train Chem Loss: 42.6995
+2025-05-21 23:29:16,951 - Epoch 1, Trajectory 20: Train Total Loss: 180.3501, Train Disp Loss: 138.8341, Train Chem Loss: 41.5160
+2025-05-21 23:29:20,272 - Epoch 1, Trajectory 21: Train Total Loss: 187.2329, Train Disp Loss: 91.7421, Train Chem Loss: 95.4907
+2025-05-21 23:29:23,585 - Epoch 1, Trajectory 22: Train Total Loss: 172.1821, Train Disp Loss: 98.8175, Train Chem Loss: 73.3647
+2025-05-21 23:29:26,888 - Epoch 1, Trajectory 23: Train Total Loss: 164.4993, Train Disp Loss: 104.5719, Train Chem Loss: 59.9274
+2025-05-21 23:29:30,203 - Epoch 1, Trajectory 24: Train Total Loss: 161.7220, Train Disp Loss: 109.1564, Train Chem Loss: 52.5656
+2025-05-21 23:29:33,522 - Epoch 1, Trajectory 25: Train Total Loss: 159.9907, Train Disp Loss: 113.5848, Train Chem Loss: 46.4059
+2025-05-21 23:29:36,826 - Epoch 1, Trajectory 26: Train Total Loss: 160.2657, Train Disp Loss: 117.6729, Train Chem Loss: 42.5928
+2025-05-21 23:29:40,136 - Epoch 1, Trajectory 27: Train Total Loss: 160.1028, Train Disp Loss: 119.6405, Train Chem Loss: 40.4623
+2025-05-21 23:29:43,457 - Epoch 1, Trajectory 28: Train Total Loss: 159.6065, Train Disp Loss: 121.1557, Train Chem Loss: 38.4508
+2025-05-21 23:29:46,767 - Epoch 1, Trajectory 29: Train Total Loss: 160.1523, Train Disp Loss: 123.0218, Train Chem Loss: 37.1305
+2025-05-21 23:29:50,068 - Epoch 1, Trajectory 30: Train Total Loss: 160.6476, Train Disp Loss: 123.8515, Train Chem Loss: 36.7961
+2025-05-21 23:29:53,378 - Epoch 1, Trajectory 31: Train Total Loss: 167.0251, Train Disp Loss: 81.0172, Train Chem Loss: 86.0079
+2025-05-21 23:29:56,685 - Epoch 1, Trajectory 32: Train Total Loss: 150.1858, Train Disp Loss: 85.2259, Train Chem Loss: 64.9599
+2025-05-21 23:30:00,005 - Epoch 1, Trajectory 33: Train Total Loss: 144.3360, Train Disp Loss: 91.4826, Train Chem Loss: 52.8535
+2025-05-21 23:30:03,309 - Epoch 1, Trajectory 34: Train Total Loss: 140.2933, Train Disp Loss: 95.8903, Train Chem Loss: 44.4030
+2025-05-21 23:30:06,613 - Epoch 1, Trajectory 35: Train Total Loss: 142.0758, Train Disp Loss: 100.7831, Train Chem Loss: 41.2927
+2025-05-21 23:30:09,914 - Epoch 1, Trajectory 36: Train Total Loss: 139.8317, Train Disp Loss: 103.5336, Train Chem Loss: 36.2980
+2025-05-21 23:30:13,224 - Epoch 1, Trajectory 37: Train Total Loss: 141.1911, Train Disp Loss: 107.1022, Train Chem Loss: 34.0890
+2025-05-21 23:30:16,532 - Epoch 1, Trajectory 38: Train Total Loss: 142.2620, Train Disp Loss: 110.0760, Train Chem Loss: 32.1859
+2025-05-21 23:30:19,830 - Epoch 1, Trajectory 39: Train Total Loss: 143.4960, Train Disp Loss: 111.9175, Train Chem Loss: 31.5785
+2025-05-21 23:30:23,135 - Epoch 1, Trajectory 40: Train Total Loss: 141.7170, Train Disp Loss: 111.5313, Train Chem Loss: 30.1857
+2025-05-21 23:30:26,433 - Epoch 1, Trajectory 41: Train Total Loss: 146.8407, Train Disp Loss: 73.5505, Train Chem Loss: 73.2902
+2025-05-21 23:30:29,738 - Epoch 1, Trajectory 42: Train Total Loss: 129.3391, Train Disp Loss: 75.1553, Train Chem Loss: 54.1838
+2025-05-21 23:30:33,024 - Epoch 1, Trajectory 43: Train Total Loss: 125.0760, Train Disp Loss: 80.3435, Train Chem Loss: 44.7325
+2025-05-21 23:30:36,325 - Epoch 1, Trajectory 44: Train Total Loss: 122.4563, Train Disp Loss: 86.0927, Train Chem Loss: 36.3636
+2025-05-21 23:30:39,627 - Epoch 1, Trajectory 45: Train Total Loss: 123.0960, Train Disp Loss: 90.2792, Train Chem Loss: 32.8168
+2025-05-21 23:30:42,655 - Epoch 1, Trajectory 46: Train Total Loss: 122.4151, Train Disp Loss: 92.9390, Train Chem Loss: 29.4761
+2025-05-21 23:30:45,954 - Epoch 1, Trajectory 47: Train Total Loss: 125.2243, Train Disp Loss: 96.5918, Train Chem Loss: 28.6324
+2025-05-21 23:30:48,982 - Epoch 1, Trajectory 48: Train Total Loss: 127.0427, Train Disp Loss: 99.6561, Train Chem Loss: 27.3866
+2025-05-21 23:30:52,269 - Epoch 1, Trajectory 49: Train Total Loss: 127.6573, Train Disp Loss: 101.6643, Train Chem Loss: 25.9929
+2025-05-21 23:30:55,570 - Epoch 1, Trajectory 50: Train Total Loss: 128.5080, Train Disp Loss: 103.2449, Train Chem Loss: 25.2631
+2025-05-21 23:30:58,885 - Epoch 1, Trajectory 51: Train Total Loss: 125.6869, Train Disp Loss: 63.4182, Train Chem Loss: 62.2687
+2025-05-21 23:31:01,915 - Epoch 1, Trajectory 52: Train Total Loss: 112.0214, Train Disp Loss: 67.2783, Train Chem Loss: 44.7431
+2025-05-21 23:31:04,945 - Epoch 1, Trajectory 53: Train Total Loss: 107.9441, Train Disp Loss: 71.5359, Train Chem Loss: 36.4082
+2025-05-21 23:31:08,240 - Epoch 1, Trajectory 54: Train Total Loss: 106.2309, Train Disp Loss: 76.3949, Train Chem Loss: 29.8360
+2025-05-21 23:31:11,547 - Epoch 1, Trajectory 55: Train Total Loss: 108.0713, Train Disp Loss: 81.0762, Train Chem Loss: 26.9951
+2025-05-21 23:31:14,852 - Epoch 1, Trajectory 56: Train Total Loss: 107.8606, Train Disp Loss: 83.4468, Train Chem Loss: 24.4138
+2025-05-21 23:31:18,158 - Epoch 1, Trajectory 57: Train Total Loss: 111.0846, Train Disp Loss: 87.5922, Train Chem Loss: 23.4923
+2025-05-21 23:31:21,468 - Epoch 1, Trajectory 58: Train Total Loss: 112.4671, Train Disp Loss: 89.7718, Train Chem Loss: 22.6953
+2025-05-21 23:31:24,496 - Epoch 1, Trajectory 59: Train Total Loss: 112.0914, Train Disp Loss: 90.6303, Train Chem Loss: 21.4611
+2025-05-21 23:31:27,522 - Epoch 1, Trajectory 60: Train Total Loss: 113.7073, Train Disp Loss: 92.7741, Train Chem Loss: 20.9332
+2025-05-21 23:31:30,819 - Epoch 1, Trajectory 61: Train Total Loss: 108.6749, Train Disp Loss: 56.3773, Train Chem Loss: 52.2976
+2025-05-21 23:31:33,852 - Epoch 1, Trajectory 62: Train Total Loss: 98.4768, Train Disp Loss: 59.1669, Train Chem Loss: 39.3100
+2025-05-21 23:31:37,153 - Epoch 1, Trajectory 63: Train Total Loss: 94.2827, Train Disp Loss: 63.2230, Train Chem Loss: 31.0597
+2025-05-21 23:31:40,462 - Epoch 1, Trajectory 64: Train Total Loss: 93.1623, Train Disp Loss: 67.4351, Train Chem Loss: 25.7272
+2025-05-21 23:31:43,770 - Epoch 1, Trajectory 65: Train Total Loss: 93.8881, Train Disp Loss: 71.7641, Train Chem Loss: 22.1240
+2025-05-21 23:31:47,079 - Epoch 1, Trajectory 66: Train Total Loss: 95.7206, Train Disp Loss: 75.3530, Train Chem Loss: 20.3676
+2025-05-21 23:31:50,390 - Epoch 1, Trajectory 67: Train Total Loss: 96.6261, Train Disp Loss: 77.4801, Train Chem Loss: 19.1460
+2025-05-21 23:31:53,702 - Epoch 1, Trajectory 68: Train Total Loss: 98.8155, Train Disp Loss: 80.0558, Train Chem Loss: 18.7597
+2025-05-21 23:31:57,005 - Epoch 1, Trajectory 69: Train Total Loss: 100.0779, Train Disp Loss: 82.6893, Train Chem Loss: 17.3886
+2025-05-21 23:32:00,309 - Epoch 1, Trajectory 70: Train Total Loss: 101.0766, Train Disp Loss: 83.8321, Train Chem Loss: 17.2445
+2025-05-21 23:32:03,631 - Epoch 1, Trajectory 71: Train Total Loss: 97.3116, Train Disp Loss: 50.2038, Train Chem Loss: 47.1078
+2025-05-21 23:32:06,953 - Epoch 1, Trajectory 72: Train Total Loss: 87.8452, Train Disp Loss: 53.9181, Train Chem Loss: 33.9270
+2025-05-21 23:32:10,272 - Epoch 1, Trajectory 73: Train Total Loss: 82.3485, Train Disp Loss: 56.2845, Train Chem Loss: 26.0641
+2025-05-21 23:32:13,587 - Epoch 1, Trajectory 74: Train Total Loss: 80.0173, Train Disp Loss: 58.9596, Train Chem Loss: 21.0576
+2025-05-21 23:32:16,899 - Epoch 1, Trajectory 75: Train Total Loss: 80.9966, Train Disp Loss: 62.6806, Train Chem Loss: 18.3160
+2025-05-21 23:32:20,216 - Epoch 1, Trajectory 76: Train Total Loss: 83.4441, Train Disp Loss: 66.2967, Train Chem Loss: 17.1474
+2025-05-21 23:32:23,532 - Epoch 1, Trajectory 77: Train Total Loss: 87.0309, Train Disp Loss: 70.9929, Train Chem Loss: 16.0380
+2025-05-21 23:32:26,856 - Epoch 1, Trajectory 78: Train Total Loss: 86.7587, Train Disp Loss: 71.5997, Train Chem Loss: 15.1590
+2025-05-21 23:32:30,185 - Epoch 1, Trajectory 79: Train Total Loss: 88.1011, Train Disp Loss: 73.4701, Train Chem Loss: 14.6310
+2025-05-21 23:32:33,501 - Epoch 1, Trajectory 80: Train Total Loss: 90.7143, Train Disp Loss: 76.0088, Train Chem Loss: 14.7055
+2025-05-21 23:32:36,819 - Epoch 1, Trajectory 81: Train Total Loss: 84.2870, Train Disp Loss: 43.6605, Train Chem Loss: 40.6265
+2025-05-21 23:32:40,133 - Epoch 1, Trajectory 82: Train Total Loss: 73.2749, Train Disp Loss: 44.4833, Train Chem Loss: 28.7916
+2025-05-21 23:32:43,461 - Epoch 1, Trajectory 83: Train Total Loss: 72.5292, Train Disp Loss: 49.4107, Train Chem Loss: 23.1185
+2025-05-21 23:32:46,786 - Epoch 1, Trajectory 84: Train Total Loss: 72.8549, Train Disp Loss: 53.3628, Train Chem Loss: 19.4920
+2025-05-21 23:32:50,091 - Epoch 1, Trajectory 85: Train Total Loss: 72.0871, Train Disp Loss: 56.0931, Train Chem Loss: 15.9940
+2025-05-21 23:32:53,395 - Epoch 1, Trajectory 86: Train Total Loss: 74.2833, Train Disp Loss: 59.7642, Train Chem Loss: 14.5192
+2025-05-21 23:32:56,707 - Epoch 1, Trajectory 87: Train Total Loss: 77.7399, Train Disp Loss: 63.0711, Train Chem Loss: 14.6688
+2025-05-21 23:33:00,024 - Epoch 1, Trajectory 88: Train Total Loss: 76.1479, Train Disp Loss: 63.6517, Train Chem Loss: 12.4962
+2025-05-21 23:33:03,332 - Epoch 1, Trajectory 89: Train Total Loss: 79.2412, Train Disp Loss: 66.8460, Train Chem Loss: 12.3952
+2025-05-21 23:33:06,639 - Epoch 1, Trajectory 90: Train Total Loss: 81.0920, Train Disp Loss: 68.5277, Train Chem Loss: 12.5643
+2025-05-21 23:33:09,953 - Epoch 1, Trajectory 91: Train Total Loss: 74.9857, Train Disp Loss: 37.7439, Train Chem Loss: 37.2418
+2025-05-21 23:33:13,265 - Epoch 1, Trajectory 92: Train Total Loss: 63.8239, Train Disp Loss: 39.9329, Train Chem Loss: 23.8910
+2025-05-21 23:33:16,566 - Epoch 1, Trajectory 93: Train Total Loss: 62.3513, Train Disp Loss: 43.2443, Train Chem Loss: 19.1070
+2025-05-21 23:33:19,873 - Epoch 1, Trajectory 94: Train Total Loss: 61.2575, Train Disp Loss: 45.7745, Train Chem Loss: 15.4830
+2025-05-21 23:33:23,168 - Epoch 1, Trajectory 95: Train Total Loss: 64.3909, Train Disp Loss: 50.6475, Train Chem Loss: 13.7434
+2025-05-21 23:33:26,470 - Epoch 1, Trajectory 96: Train Total Loss: 65.6539, Train Disp Loss: 53.0002, Train Chem Loss: 12.6537
+2025-05-21 23:33:29,532 - Epoch 1, Trajectory 97: Train Total Loss: 67.2710, Train Disp Loss: 55.6952, Train Chem Loss: 11.5759
+2025-05-21 23:33:32,840 - Epoch 1, Trajectory 98: Train Total Loss: 68.8492, Train Disp Loss: 57.8332, Train Chem Loss: 11.0160
+2025-05-21 23:33:36,139 - Epoch 1, Trajectory 99: Train Total Loss: 70.8835, Train Disp Loss: 60.1456, Train Chem Loss: 10.7380
+2025-05-21 23:33:39,463 - Epoch 1, Trajectory 100: Train Total Loss: 72.8203, Train Disp Loss: 61.9980, Train Chem Loss: 10.8224
+2025-05-21 23:33:40,385 - Epoch 1, Trajectory 1: Rollout MSE = 0.000495, Rollout Disp MSE = 0.000435, Rollout Chem MSE = 0.000061
+2025-05-21 23:33:41,307 - Epoch 1, Trajectory 2: Rollout MSE = 0.001045, Rollout Disp MSE = 0.000478, Rollout Chem MSE = 0.000071
+2025-05-21 23:33:42,228 - Epoch 1, Trajectory 3: Rollout MSE = 0.001641, Rollout Disp MSE = 0.000527, Rollout Chem MSE = 0.000069
+2025-05-21 23:33:43,150 - Epoch 1, Trajectory 4: Rollout MSE = 0.002244, Rollout Disp MSE = 0.000546, Rollout Chem MSE = 0.000057
+2025-05-21 23:33:44,074 - Epoch 1, Trajectory 5: Rollout MSE = 0.002842, Rollout Disp MSE = 0.000536, Rollout Chem MSE = 0.000062
+2025-05-21 23:33:44,996 - Epoch 1, Trajectory 6: Rollout MSE = 0.003467, Rollout Disp MSE = 0.000540, Rollout Chem MSE = 0.000086
+2025-05-21 23:33:45,919 - Epoch 1, Trajectory 7: Rollout MSE = 0.004147, Rollout Disp MSE = 0.000563, Rollout Chem MSE = 0.000116
+2025-05-21 23:33:46,839 - Epoch 1, Trajectory 8: Rollout MSE = 0.004859, Rollout Disp MSE = 0.000574, Rollout Chem MSE = 0.000138
+2025-05-21 23:33:47,764 - Epoch 1, Trajectory 9: Rollout MSE = 0.005573, Rollout Disp MSE = 0.000568, Rollout Chem MSE = 0.000145
+2025-05-21 23:33:48,687 - Epoch 1, Trajectory 10: Rollout MSE = 0.006255, Rollout Disp MSE = 0.000540, Rollout Chem MSE = 0.000143
+2025-05-21 23:33:49,608 - Epoch 1, Trajectory 11: Rollout MSE = 0.006721, Rollout Disp MSE = 0.000368, Rollout Chem MSE = 0.000098
+2025-05-21 23:33:50,540 - Epoch 1, Trajectory 12: Rollout MSE = 0.007215, Rollout Disp MSE = 0.000401, Rollout Chem MSE = 0.000093
+2025-05-21 23:33:51,462 - Epoch 1, Trajectory 13: Rollout MSE = 0.007746, Rollout Disp MSE = 0.000448, Rollout Chem MSE = 0.000083
+2025-05-21 23:33:52,386 - Epoch 1, Trajectory 14: Rollout MSE = 0.008301, Rollout Disp MSE = 0.000477, Rollout Chem MSE = 0.000078
+2025-05-21 23:33:53,307 - Epoch 1, Trajectory 15: Rollout MSE = 0.008866, Rollout Disp MSE = 0.000469, Rollout Chem MSE = 0.000095
+2025-05-21 23:33:54,230 - Epoch 1, Trajectory 16: Rollout MSE = 0.009497, Rollout Disp MSE = 0.000497, Rollout Chem MSE = 0.000135
+2025-05-21 23:33:55,152 - Epoch 1, Trajectory 17: Rollout MSE = 0.010153, Rollout Disp MSE = 0.000505, Rollout Chem MSE = 0.000151
+2025-05-21 23:33:56,076 - Epoch 1, Trajectory 18: Rollout MSE = 0.010816, Rollout Disp MSE = 0.000503, Rollout Chem MSE = 0.000160
+2025-05-21 23:33:57,003 - Epoch 1, Trajectory 19: Rollout MSE = 0.011441, Rollout Disp MSE = 0.000469, Rollout Chem MSE = 0.000157
+2025-05-21 23:33:57,928 - Epoch 1, Trajectory 20: Rollout MSE = 0.012001, Rollout Disp MSE = 0.000412, Rollout Chem MSE = 0.000147
+2025-05-21 23:33:58,851 - Epoch 1, Trajectory 21: Rollout MSE = 0.012488, Rollout Disp MSE = 0.000352, Rollout Chem MSE = 0.000135
+2025-05-21 23:33:59,772 - Epoch 1, Trajectory 22: Rollout MSE = 0.012984, Rollout Disp MSE = 0.000358, Rollout Chem MSE = 0.000138
+2025-05-21 23:34:00,694 - Epoch 1, Trajectory 23: Rollout MSE = 0.013468, Rollout Disp MSE = 0.000378, Rollout Chem MSE = 0.000107
+2025-05-21 23:34:01,617 - Epoch 1, Trajectory 24: Rollout MSE = 0.013967, Rollout Disp MSE = 0.000395, Rollout Chem MSE = 0.000103
+2025-05-21 23:34:02,538 - Epoch 1, Trajectory 25: Rollout MSE = 0.014522, Rollout Disp MSE = 0.000413, Rollout Chem MSE = 0.000143
+2025-05-21 23:34:03,459 - Epoch 1, Trajectory 26: Rollout MSE = 0.015124, Rollout Disp MSE = 0.000433, Rollout Chem MSE = 0.000169
+2025-05-21 23:34:04,381 - Epoch 1, Trajectory 27: Rollout MSE = 0.015717, Rollout Disp MSE = 0.000427, Rollout Chem MSE = 0.000166
+2025-05-21 23:34:05,303 - Epoch 1, Trajectory 28: Rollout MSE = 0.016283, Rollout Disp MSE = 0.000403, Rollout Chem MSE = 0.000163
+2025-05-21 23:34:06,227 - Epoch 1, Trajectory 29: Rollout MSE = 0.016783, Rollout Disp MSE = 0.000346, Rollout Chem MSE = 0.000154
+2025-05-21 23:34:07,153 - Epoch 1, Trajectory 30: Rollout MSE = 0.017217, Rollout Disp MSE = 0.000281, Rollout Chem MSE = 0.000153
+2025-05-21 23:34:08,084 - Epoch 1, Trajectory 31: Rollout MSE = 0.017690, Rollout Disp MSE = 0.000338, Rollout Chem MSE = 0.000135
+2025-05-21 23:34:09,011 - Epoch 1, Trajectory 32: Rollout MSE = 0.018191, Rollout Disp MSE = 0.000333, Rollout Chem MSE = 0.000168
+2025-05-21 23:34:09,937 - Epoch 1, Trajectory 33: Rollout MSE = 0.018675, Rollout Disp MSE = 0.000330, Rollout Chem MSE = 0.000154
+2025-05-21 23:34:10,859 - Epoch 1, Trajectory 34: Rollout MSE = 0.019137, Rollout Disp MSE = 0.000321, Rollout Chem MSE = 0.000141
+2025-05-21 23:34:11,780 - Epoch 1, Trajectory 35: Rollout MSE = 0.019629, Rollout Disp MSE = 0.000330, Rollout Chem MSE = 0.000162
+2025-05-21 23:34:12,700 - Epoch 1, Trajectory 36: Rollout MSE = 0.020139, Rollout Disp MSE = 0.000333, Rollout Chem MSE = 0.000176
+2025-05-21 23:34:13,622 - Epoch 1, Trajectory 37: Rollout MSE = 0.020611, Rollout Disp MSE = 0.000307, Rollout Chem MSE = 0.000165
+2025-05-21 23:34:14,545 - Epoch 1, Trajectory 38: Rollout MSE = 0.021032, Rollout Disp MSE = 0.000268, Rollout Chem MSE = 0.000153
+2025-05-21 23:34:15,468 - Epoch 1, Trajectory 39: Rollout MSE = 0.021398, Rollout Disp MSE = 0.000216, Rollout Chem MSE = 0.000150
+2025-05-21 23:34:16,391 - Epoch 1, Trajectory 40: Rollout MSE = 0.021720, Rollout Disp MSE = 0.000163, Rollout Chem MSE = 0.000159
+2025-05-21 23:34:17,313 - Epoch 1, Trajectory 41: Rollout MSE = 0.022152, Rollout Disp MSE = 0.000317, Rollout Chem MSE = 0.000115
+2025-05-21 23:34:18,234 - Epoch 1, Trajectory 42: Rollout MSE = 0.022621, Rollout Disp MSE = 0.000309, Rollout Chem MSE = 0.000160
+2025-05-21 23:34:19,160 - Epoch 1, Trajectory 43: Rollout MSE = 0.023093, Rollout Disp MSE = 0.000291, Rollout Chem MSE = 0.000181
+2025-05-21 23:34:20,088 - Epoch 1, Trajectory 44: Rollout MSE = 0.023542, Rollout Disp MSE = 0.000261, Rollout Chem MSE = 0.000189
+2025-05-21 23:34:21,014 - Epoch 1, Trajectory 45: Rollout MSE = 0.023984, Rollout Disp MSE = 0.000246, Rollout Chem MSE = 0.000196
+2025-05-21 23:34:21,940 - Epoch 1, Trajectory 46: Rollout MSE = 0.024382, Rollout Disp MSE = 0.000221, Rollout Chem MSE = 0.000176
+2025-05-21 23:34:22,862 - Epoch 1, Trajectory 47: Rollout MSE = 0.024721, Rollout Disp MSE = 0.000184, Rollout Chem MSE = 0.000155
+2025-05-21 23:34:23,785 - Epoch 1, Trajectory 48: Rollout MSE = 0.025014, Rollout Disp MSE = 0.000150, Rollout Chem MSE = 0.000143
+2025-05-21 23:34:24,710 - Epoch 1, Trajectory 49: Rollout MSE = 0.025284, Rollout Disp MSE = 0.000117, Rollout Chem MSE = 0.000153
+2025-05-21 23:34:25,631 - Epoch 1, Trajectory 50: Rollout MSE = 0.025545, Rollout Disp MSE = 0.000090, Rollout Chem MSE = 0.000171
+2025-05-21 23:34:26,556 - Epoch 1, Trajectory 51: Rollout MSE = 0.025927, Rollout Disp MSE = 0.000300, Rollout Chem MSE = 0.000082
+2025-05-21 23:34:27,476 - Epoch 1, Trajectory 52: Rollout MSE = 0.026344, Rollout Disp MSE = 0.000290, Rollout Chem MSE = 0.000127
+2025-05-21 23:34:28,392 - Epoch 1, Trajectory 53: Rollout MSE = 0.026781, Rollout Disp MSE = 0.000263, Rollout Chem MSE = 0.000174
+2025-05-21 23:34:29,308 - Epoch 1, Trajectory 54: Rollout MSE = 0.027192, Rollout Disp MSE = 0.000218, Rollout Chem MSE = 0.000193
+2025-05-21 23:34:30,224 - Epoch 1, Trajectory 55: Rollout MSE = 0.027563, Rollout Disp MSE = 0.000174, Rollout Chem MSE = 0.000197
+2025-05-21 23:34:31,140 - Epoch 1, Trajectory 56: Rollout MSE = 0.027886, Rollout Disp MSE = 0.000146, Rollout Chem MSE = 0.000176
+2025-05-21 23:34:32,056 - Epoch 1, Trajectory 57: Rollout MSE = 0.028152, Rollout Disp MSE = 0.000118, Rollout Chem MSE = 0.000148
+2025-05-21 23:34:32,975 - Epoch 1, Trajectory 58: Rollout MSE = 0.028378, Rollout Disp MSE = 0.000090, Rollout Chem MSE = 0.000136
+2025-05-21 23:34:33,891 - Epoch 1, Trajectory 59: Rollout MSE = 0.028596, Rollout Disp MSE = 0.000074, Rollout Chem MSE = 0.000144
+2025-05-21 23:34:34,806 - Epoch 1, Trajectory 60: Rollout MSE = 0.028824, Rollout Disp MSE = 0.000068, Rollout Chem MSE = 0.000161
+2025-05-21 23:34:35,722 - Epoch 1, Trajectory 61: Rollout MSE = 0.029172, Rollout Disp MSE = 0.000292, Rollout Chem MSE = 0.000056
+2025-05-21 23:34:36,636 - Epoch 1, Trajectory 62: Rollout MSE = 0.029550, Rollout Disp MSE = 0.000284, Rollout Chem MSE = 0.000094
+2025-05-21 23:34:37,554 - Epoch 1, Trajectory 63: Rollout MSE = 0.029955, Rollout Disp MSE = 0.000260, Rollout Chem MSE = 0.000145
+2025-05-21 23:34:38,469 - Epoch 1, Trajectory 64: Rollout MSE = 0.030357, Rollout Disp MSE = 0.000225, Rollout Chem MSE = 0.000177
+2025-05-21 23:34:39,384 - Epoch 1, Trajectory 65: Rollout MSE = 0.030727, Rollout Disp MSE = 0.000185, Rollout Chem MSE = 0.000185
+2025-05-21 23:34:40,302 - Epoch 1, Trajectory 66: Rollout MSE = 0.031058, Rollout Disp MSE = 0.000150, Rollout Chem MSE = 0.000180
+2025-05-21 23:34:41,219 - Epoch 1, Trajectory 67: Rollout MSE = 0.031336, Rollout Disp MSE = 0.000124, Rollout Chem MSE = 0.000155
+2025-05-21 23:34:42,141 - Epoch 1, Trajectory 68: Rollout MSE = 0.031574, Rollout Disp MSE = 0.000098, Rollout Chem MSE = 0.000140
+2025-05-21 23:34:43,059 - Epoch 1, Trajectory 69: Rollout MSE = 0.031789, Rollout Disp MSE = 0.000077, Rollout Chem MSE = 0.000138
+2025-05-21 23:34:43,976 - Epoch 1, Trajectory 70: Rollout MSE = 0.032012, Rollout Disp MSE = 0.000073, Rollout Chem MSE = 0.000150
+2025-05-21 23:34:44,891 - Epoch 1, Trajectory 71: Rollout MSE = 0.032346, Rollout Disp MSE = 0.000291, Rollout Chem MSE = 0.000043
+2025-05-21 23:34:45,805 - Epoch 1, Trajectory 72: Rollout MSE = 0.032692, Rollout Disp MSE = 0.000284, Rollout Chem MSE = 0.000062
+2025-05-21 23:34:46,720 - Epoch 1, Trajectory 73: Rollout MSE = 0.033074, Rollout Disp MSE = 0.000272, Rollout Chem MSE = 0.000109
+2025-05-21 23:34:47,634 - Epoch 1, Trajectory 74: Rollout MSE = 0.033477, Rollout Disp MSE = 0.000255, Rollout Chem MSE = 0.000149
+2025-05-21 23:34:48,549 - Epoch 1, Trajectory 75: Rollout MSE = 0.033878, Rollout Disp MSE = 0.000231, Rollout Chem MSE = 0.000170
+2025-05-21 23:34:49,464 - Epoch 1, Trajectory 76: Rollout MSE = 0.034247, Rollout Disp MSE = 0.000195, Rollout Chem MSE = 0.000174
+2025-05-21 23:34:50,378 - Epoch 1, Trajectory 77: Rollout MSE = 0.034565, Rollout Disp MSE = 0.000162, Rollout Chem MSE = 0.000156
+2025-05-21 23:34:51,292 - Epoch 1, Trajectory 78: Rollout MSE = 0.034832, Rollout Disp MSE = 0.000129, Rollout Chem MSE = 0.000138
+2025-05-21 23:34:52,206 - Epoch 1, Trajectory 79: Rollout MSE = 0.035066, Rollout Disp MSE = 0.000102, Rollout Chem MSE = 0.000132
+2025-05-21 23:34:53,125 - Epoch 1, Trajectory 80: Rollout MSE = 0.035284, Rollout Disp MSE = 0.000085, Rollout Chem MSE = 0.000133
+2025-05-21 23:34:54,042 - Epoch 1, Trajectory 81: Rollout MSE = 0.035625, Rollout Disp MSE = 0.000297, Rollout Chem MSE = 0.000045
+2025-05-21 23:34:54,957 - Epoch 1, Trajectory 82: Rollout MSE = 0.035958, Rollout Disp MSE = 0.000291, Rollout Chem MSE = 0.000042
+2025-05-21 23:34:55,872 - Epoch 1, Trajectory 83: Rollout MSE = 0.036321, Rollout Disp MSE = 0.000285, Rollout Chem MSE = 0.000079
+2025-05-21 23:34:56,918 - Epoch 1, Trajectory 84: Rollout MSE = 0.036712, Rollout Disp MSE = 0.000273, Rollout Chem MSE = 0.000118
+2025-05-21 23:34:57,838 - Epoch 1, Trajectory 85: Rollout MSE = 0.037107, Rollout Disp MSE = 0.000255, Rollout Chem MSE = 0.000140
+2025-05-21 23:34:58,757 - Epoch 1, Trajectory 86: Rollout MSE = 0.037485, Rollout Disp MSE = 0.000229, Rollout Chem MSE = 0.000148
+2025-05-21 23:34:59,675 - Epoch 1, Trajectory 87: Rollout MSE = 0.037818, Rollout Disp MSE = 0.000194, Rollout Chem MSE = 0.000139
+2025-05-21 23:35:00,592 - Epoch 1, Trajectory 88: Rollout MSE = 0.038095, Rollout Disp MSE = 0.000156, Rollout Chem MSE = 0.000121
+2025-05-21 23:35:01,511 - Epoch 1, Trajectory 89: Rollout MSE = 0.038331, Rollout Disp MSE = 0.000123, Rollout Chem MSE = 0.000113
+2025-05-21 23:35:02,427 - Epoch 1, Trajectory 90: Rollout MSE = 0.038542, Rollout Disp MSE = 0.000100, Rollout Chem MSE = 0.000111
+2025-05-21 23:35:03,343 - Epoch 1, Trajectory 91: Rollout MSE = 0.038907, Rollout Disp MSE = 0.000305, Rollout Chem MSE = 0.000059
+2025-05-21 23:35:04,265 - Epoch 1, Trajectory 92: Rollout MSE = 0.039239, Rollout Disp MSE = 0.000301, Rollout Chem MSE = 0.000032
+2025-05-21 23:35:05,182 - Epoch 1, Trajectory 93: Rollout MSE = 0.039590, Rollout Disp MSE = 0.000295, Rollout Chem MSE = 0.000056
+2025-05-21 23:35:06,098 - Epoch 1, Trajectory 94: Rollout MSE = 0.039962, Rollout Disp MSE = 0.000284, Rollout Chem MSE = 0.000088
+2025-05-21 23:35:07,015 - Epoch 1, Trajectory 95: Rollout MSE = 0.040341, Rollout Disp MSE = 0.000268, Rollout Chem MSE = 0.000110
+2025-05-21 23:35:07,932 - Epoch 1, Trajectory 96: Rollout MSE = 0.040710, Rollout Disp MSE = 0.000248, Rollout Chem MSE = 0.000120
+2025-05-21 23:35:08,854 - Epoch 1, Trajectory 97: Rollout MSE = 0.041041, Rollout Disp MSE = 0.000215, Rollout Chem MSE = 0.000116
+2025-05-21 23:35:09,773 - Epoch 1, Trajectory 98: Rollout MSE = 0.041319, Rollout Disp MSE = 0.000175, Rollout Chem MSE = 0.000102
+2025-05-21 23:35:10,698 - Epoch 1, Trajectory 99: Rollout MSE = 0.041548, Rollout Disp MSE = 0.000137, Rollout Chem MSE = 0.000093
+2025-05-21 23:35:11,619 - Epoch 1, Trajectory 100: Rollout MSE = 0.041749, Rollout Disp MSE = 0.000110, Rollout Chem MSE = 0.000091
+2025-05-21 23:35:15,113 - Epoch 2, Trajectory 1: Train Total Loss: 64.3973, Train Disp Loss: 50.3879, Train Chem Loss: 14.0094
+2025-05-21 23:35:18,416 - Epoch 2, Trajectory 2: Train Total Loss: 65.9313, Train Disp Loss: 54.0496, Train Chem Loss: 11.8816
+2025-05-21 23:35:21,730 - Epoch 2, Trajectory 3: Train Total Loss: 70.9600, Train Disp Loss: 60.0654, Train Chem Loss: 10.8945
+2025-05-21 23:35:25,037 - Epoch 2, Trajectory 4: Train Total Loss: 74.2907, Train Disp Loss: 63.3122, Train Chem Loss: 10.9785
+2025-05-21 23:35:28,348 - Epoch 2, Trajectory 5: Train Total Loss: 77.5435, Train Disp Loss: 66.9492, Train Chem Loss: 10.5943
+2025-05-21 23:35:31,665 - Epoch 2, Trajectory 6: Train Total Loss: 80.5626, Train Disp Loss: 69.4995, Train Chem Loss: 11.0631
+2025-05-21 23:35:34,980 - Epoch 2, Trajectory 7: Train Total Loss: 84.6546, Train Disp Loss: 73.5669, Train Chem Loss: 11.0876
+2025-05-21 23:35:38,288 - Epoch 2, Trajectory 8: Train Total Loss: 85.0886, Train Disp Loss: 74.4345, Train Chem Loss: 10.6541
+2025-05-21 23:35:41,599 - Epoch 2, Trajectory 9: Train Total Loss: 89.0308, Train Disp Loss: 77.4862, Train Chem Loss: 11.5446
+2025-05-21 23:35:44,904 - Epoch 2, Trajectory 10: Train Total Loss: 89.4305, Train Disp Loss: 78.2910, Train Chem Loss: 11.1395
+2025-05-21 23:35:48,221 - Epoch 2, Trajectory 11: Train Total Loss: 56.9589, Train Disp Loss: 39.7775, Train Chem Loss: 17.1814
+2025-05-21 23:35:51,533 - Epoch 2, Trajectory 12: Train Total Loss: 55.4702, Train Disp Loss: 42.3703, Train Chem Loss: 13.0998
+2025-05-21 23:35:54,838 - Epoch 2, Trajectory 13: Train Total Loss: 56.9635, Train Disp Loss: 45.5102, Train Chem Loss: 11.4533
+2025-05-21 23:35:58,146 - Epoch 2, Trajectory 14: Train Total Loss: 61.5664, Train Disp Loss: 50.3252, Train Chem Loss: 11.2412
+2025-05-21 23:36:01,454 - Epoch 2, Trajectory 15: Train Total Loss: 64.4629, Train Disp Loss: 53.8298, Train Chem Loss: 10.6331
+2025-05-21 23:36:04,767 - Epoch 2, Trajectory 16: Train Total Loss: 66.8700, Train Disp Loss: 56.6067, Train Chem Loss: 10.2633
+2025-05-21 23:36:08,081 - Epoch 2, Trajectory 17: Train Total Loss: 69.4432, Train Disp Loss: 59.2416, Train Chem Loss: 10.2016
+2025-05-21 23:36:11,387 - Epoch 2, Trajectory 18: Train Total Loss: 71.9188, Train Disp Loss: 61.1213, Train Chem Loss: 10.7975
+2025-05-21 23:36:14,693 - Epoch 2, Trajectory 19: Train Total Loss: 73.4366, Train Disp Loss: 62.2879, Train Chem Loss: 11.1487
+2025-05-21 23:36:18,009 - Epoch 2, Trajectory 20: Train Total Loss: 76.0051, Train Disp Loss: 65.3523, Train Chem Loss: 10.6528
+2025-05-21 23:36:21,310 - Epoch 2, Trajectory 21: Train Total Loss: 51.0705, Train Disp Loss: 33.7990, Train Chem Loss: 17.2716
+2025-05-21 23:36:24,625 - Epoch 2, Trajectory 22: Train Total Loss: 47.9251, Train Disp Loss: 35.0323, Train Chem Loss: 12.8928
+2025-05-21 23:36:27,942 - Epoch 2, Trajectory 23: Train Total Loss: 49.6806, Train Disp Loss: 38.2699, Train Chem Loss: 11.4108
+2025-05-21 23:36:31,257 - Epoch 2, Trajectory 24: Train Total Loss: 52.6306, Train Disp Loss: 41.7792, Train Chem Loss: 10.8515
+2025-05-21 23:36:34,568 - Epoch 2, Trajectory 25: Train Total Loss: 55.4555, Train Disp Loss: 44.6249, Train Chem Loss: 10.8306
+2025-05-21 23:36:37,877 - Epoch 2, Trajectory 26: Train Total Loss: 56.4266, Train Disp Loss: 46.4618, Train Chem Loss: 9.9648
+2025-05-21 23:36:41,187 - Epoch 2, Trajectory 27: Train Total Loss: 59.2475, Train Disp Loss: 49.3763, Train Chem Loss: 9.8712
+2025-05-21 23:36:44,499 - Epoch 2, Trajectory 28: Train Total Loss: 61.1967, Train Disp Loss: 51.3521, Train Chem Loss: 9.8446
+2025-05-21 23:36:47,807 - Epoch 2, Trajectory 29: Train Total Loss: 63.9327, Train Disp Loss: 53.9236, Train Chem Loss: 10.0091
+2025-05-21 23:36:51,116 - Epoch 2, Trajectory 30: Train Total Loss: 65.0029, Train Disp Loss: 55.1089, Train Chem Loss: 9.8940
+2025-05-21 23:36:54,425 - Epoch 2, Trajectory 31: Train Total Loss: 47.0500, Train Disp Loss: 29.0497, Train Chem Loss: 18.0003
+2025-05-21 23:36:57,732 - Epoch 2, Trajectory 32: Train Total Loss: 43.2427, Train Disp Loss: 30.1423, Train Chem Loss: 13.1004
+2025-05-21 23:37:01,043 - Epoch 2, Trajectory 33: Train Total Loss: 44.9773, Train Disp Loss: 32.9586, Train Chem Loss: 12.0188
+2025-05-21 23:37:04,352 - Epoch 2, Trajectory 34: Train Total Loss: 45.2882, Train Disp Loss: 35.0277, Train Chem Loss: 10.2606
+2025-05-21 23:37:07,663 - Epoch 2, Trajectory 35: Train Total Loss: 46.1718, Train Disp Loss: 36.9200, Train Chem Loss: 9.2518
+2025-05-21 23:37:10,983 - Epoch 2, Trajectory 36: Train Total Loss: 51.7254, Train Disp Loss: 42.3982, Train Chem Loss: 9.3272
+2025-05-21 23:37:14,299 - Epoch 2, Trajectory 37: Train Total Loss: 51.9951, Train Disp Loss: 42.7558, Train Chem Loss: 9.2393
+2025-05-21 23:37:17,607 - Epoch 2, Trajectory 38: Train Total Loss: 52.3495, Train Disp Loss: 43.4400, Train Chem Loss: 8.9095
+2025-05-21 23:37:20,916 - Epoch 2, Trajectory 39: Train Total Loss: 55.5731, Train Disp Loss: 46.4977, Train Chem Loss: 9.0755
+2025-05-21 23:37:24,228 - Epoch 2, Trajectory 40: Train Total Loss: 56.9252, Train Disp Loss: 47.6803, Train Chem Loss: 9.2448
+2025-05-21 23:37:27,541 - Epoch 2, Trajectory 41: Train Total Loss: 43.9198, Train Disp Loss: 25.5642, Train Chem Loss: 18.3556
+2025-05-21 23:37:30,852 - Epoch 2, Trajectory 42: Train Total Loss: 39.4284, Train Disp Loss: 26.5489, Train Chem Loss: 12.8795
+2025-05-21 23:37:34,162 - Epoch 2, Trajectory 43: Train Total Loss: 40.5568, Train Disp Loss: 29.5586, Train Chem Loss: 10.9982
+2025-05-21 23:37:37,465 - Epoch 2, Trajectory 44: Train Total Loss: 40.9158, Train Disp Loss: 30.8927, Train Chem Loss: 10.0231
+2025-05-21 23:37:40,774 - Epoch 2, Trajectory 45: Train Total Loss: 42.3742, Train Disp Loss: 33.1047, Train Chem Loss: 9.2696
+2025-05-21 23:37:44,084 - Epoch 2, Trajectory 46: Train Total Loss: 44.5073, Train Disp Loss: 35.5109, Train Chem Loss: 8.9963
+2025-05-21 23:37:47,390 - Epoch 2, Trajectory 47: Train Total Loss: 44.8644, Train Disp Loss: 36.7844, Train Chem Loss: 8.0800
+2025-05-21 23:37:50,702 - Epoch 2, Trajectory 48: Train Total Loss: 46.9312, Train Disp Loss: 38.9189, Train Chem Loss: 8.0123
+2025-05-21 23:37:54,007 - Epoch 2, Trajectory 49: Train Total Loss: 48.2233, Train Disp Loss: 39.9435, Train Chem Loss: 8.2798
+2025-05-21 23:37:57,317 - Epoch 2, Trajectory 50: Train Total Loss: 50.9277, Train Disp Loss: 42.9093, Train Chem Loss: 8.0184
+2025-05-21 23:38:00,626 - Epoch 2, Trajectory 51: Train Total Loss: 42.2165, Train Disp Loss: 23.8165, Train Chem Loss: 18.4000
+2025-05-21 23:38:03,935 - Epoch 2, Trajectory 52: Train Total Loss: 37.6941, Train Disp Loss: 24.3295, Train Chem Loss: 13.3645
+2025-05-21 23:38:07,247 - Epoch 2, Trajectory 53: Train Total Loss: 36.4835, Train Disp Loss: 25.1012, Train Chem Loss: 11.3823
+2025-05-21 23:38:10,552 - Epoch 2, Trajectory 54: Train Total Loss: 36.9905, Train Disp Loss: 27.7396, Train Chem Loss: 9.2510
+2025-05-21 23:38:13,853 - Epoch 2, Trajectory 55: Train Total Loss: 38.0462, Train Disp Loss: 29.1706, Train Chem Loss: 8.8756
+2025-05-21 23:38:17,164 - Epoch 2, Trajectory 56: Train Total Loss: 40.0337, Train Disp Loss: 30.8467, Train Chem Loss: 9.1870
+2025-05-21 23:38:20,464 - Epoch 2, Trajectory 57: Train Total Loss: 42.0030, Train Disp Loss: 33.5446, Train Chem Loss: 8.4583
+2025-05-21 23:38:23,769 - Epoch 2, Trajectory 58: Train Total Loss: 42.7804, Train Disp Loss: 34.8975, Train Chem Loss: 7.8829
+2025-05-21 23:38:27,076 - Epoch 2, Trajectory 59: Train Total Loss: 43.2521, Train Disp Loss: 35.8812, Train Chem Loss: 7.3710
+2025-05-21 23:38:30,391 - Epoch 2, Trajectory 60: Train Total Loss: 45.4107, Train Disp Loss: 37.9735, Train Chem Loss: 7.4372
+2025-05-21 23:38:33,733 - Epoch 2, Trajectory 61: Train Total Loss: 38.8083, Train Disp Loss: 20.4663, Train Chem Loss: 18.3420
+2025-05-21 23:38:37,038 - Epoch 2, Trajectory 62: Train Total Loss: 32.3093, Train Disp Loss: 20.6614, Train Chem Loss: 11.6480
+2025-05-21 23:38:40,346 - Epoch 2, Trajectory 63: Train Total Loss: 31.4956, Train Disp Loss: 21.5050, Train Chem Loss: 9.9906
+2025-05-21 23:38:43,654 - Epoch 2, Trajectory 64: Train Total Loss: 33.8653, Train Disp Loss: 24.3783, Train Chem Loss: 9.4870
+2025-05-21 23:38:46,966 - Epoch 2, Trajectory 65: Train Total Loss: 34.0233, Train Disp Loss: 26.0017, Train Chem Loss: 8.0216
+2025-05-21 23:38:50,275 - Epoch 2, Trajectory 66: Train Total Loss: 34.8564, Train Disp Loss: 27.3689, Train Chem Loss: 7.4874
+2025-05-21 23:38:53,585 - Epoch 2, Trajectory 67: Train Total Loss: 36.3297, Train Disp Loss: 29.0902, Train Chem Loss: 7.2395
+2025-05-21 23:38:56,892 - Epoch 2, Trajectory 68: Train Total Loss: 37.9567, Train Disp Loss: 30.2222, Train Chem Loss: 7.7345
+2025-05-21 23:39:00,196 - Epoch 2, Trajectory 69: Train Total Loss: 39.8723, Train Disp Loss: 32.6938, Train Chem Loss: 7.1785
+2025-05-21 23:39:03,499 - Epoch 2, Trajectory 70: Train Total Loss: 41.4805, Train Disp Loss: 33.9833, Train Chem Loss: 7.4973
+2025-05-21 23:39:06,802 - Epoch 2, Trajectory 71: Train Total Loss: 38.4750, Train Disp Loss: 18.5709, Train Chem Loss: 19.9041
+2025-05-21 23:39:10,109 - Epoch 2, Trajectory 72: Train Total Loss: 32.3194, Train Disp Loss: 19.5485, Train Chem Loss: 12.7709
+2025-05-21 23:39:13,425 - Epoch 2, Trajectory 73: Train Total Loss: 30.1344, Train Disp Loss: 20.1898, Train Chem Loss: 9.9447
+2025-05-21 23:39:16,732 - Epoch 2, Trajectory 74: Train Total Loss: 29.4532, Train Disp Loss: 21.1253, Train Chem Loss: 8.3279
+2025-05-21 23:39:20,048 - Epoch 2, Trajectory 75: Train Total Loss: 31.0178, Train Disp Loss: 23.2623, Train Chem Loss: 7.7555
+2025-05-21 23:39:23,353 - Epoch 2, Trajectory 76: Train Total Loss: 33.0650, Train Disp Loss: 25.7301, Train Chem Loss: 7.3349
+2025-05-21 23:39:26,664 - Epoch 2, Trajectory 77: Train Total Loss: 32.6406, Train Disp Loss: 25.8091, Train Chem Loss: 6.8315
+2025-05-21 23:39:29,700 - Epoch 2, Trajectory 78: Train Total Loss: 35.4990, Train Disp Loss: 28.8365, Train Chem Loss: 6.6625
+2025-05-21 23:39:33,012 - Epoch 2, Trajectory 79: Train Total Loss: 34.8800, Train Disp Loss: 28.3795, Train Chem Loss: 6.5005
+2025-05-21 23:39:36,317 - Epoch 2, Trajectory 80: Train Total Loss: 37.9142, Train Disp Loss: 31.1035, Train Chem Loss: 6.8107
+2025-05-21 23:39:39,620 - Epoch 2, Trajectory 81: Train Total Loss: 36.1348, Train Disp Loss: 17.1527, Train Chem Loss: 18.9821
+2025-05-21 23:39:42,927 - Epoch 2, Trajectory 82: Train Total Loss: 28.6328, Train Disp Loss: 16.8192, Train Chem Loss: 11.8136
+2025-05-21 23:39:46,232 - Epoch 2, Trajectory 83: Train Total Loss: 27.2824, Train Disp Loss: 17.8403, Train Chem Loss: 9.4422
+2025-05-21 23:39:49,537 - Epoch 2, Trajectory 84: Train Total Loss: 27.7930, Train Disp Loss: 19.8042, Train Chem Loss: 7.9888
+2025-05-21 23:39:52,839 - Epoch 2, Trajectory 85: Train Total Loss: 28.0070, Train Disp Loss: 20.6603, Train Chem Loss: 7.3467
+2025-05-21 23:39:56,159 - Epoch 2, Trajectory 86: Train Total Loss: 29.5013, Train Disp Loss: 22.6564, Train Chem Loss: 6.8449
+2025-05-21 23:39:59,462 - Epoch 2, Trajectory 87: Train Total Loss: 30.1299, Train Disp Loss: 23.3579, Train Chem Loss: 6.7720
+2025-05-21 23:40:02,774 - Epoch 2, Trajectory 88: Train Total Loss: 31.9674, Train Disp Loss: 25.2034, Train Chem Loss: 6.7640
+2025-05-21 23:40:06,090 - Epoch 2, Trajectory 89: Train Total Loss: 33.6060, Train Disp Loss: 27.1976, Train Chem Loss: 6.4084
+2025-05-21 23:40:09,398 - Epoch 2, Trajectory 90: Train Total Loss: 34.6726, Train Disp Loss: 28.2965, Train Chem Loss: 6.3761
+2025-05-21 23:40:12,705 - Epoch 2, Trajectory 91: Train Total Loss: 35.2546, Train Disp Loss: 16.2371, Train Chem Loss: 19.0175
+2025-05-21 23:40:16,016 - Epoch 2, Trajectory 92: Train Total Loss: 26.9108, Train Disp Loss: 15.9530, Train Chem Loss: 10.9578
+2025-05-21 23:40:19,322 - Epoch 2, Trajectory 93: Train Total Loss: 25.9371, Train Disp Loss: 16.8311, Train Chem Loss: 9.1060
+2025-05-21 23:40:22,631 - Epoch 2, Trajectory 94: Train Total Loss: 25.8290, Train Disp Loss: 18.1032, Train Chem Loss: 7.7258
+2025-05-21 23:40:25,941 - Epoch 2, Trajectory 95: Train Total Loss: 26.8624, Train Disp Loss: 19.1102, Train Chem Loss: 7.7523
+2025-05-21 23:40:29,234 - Epoch 2, Trajectory 96: Train Total Loss: 26.4884, Train Disp Loss: 19.9025, Train Chem Loss: 6.5859
+2025-05-21 23:40:32,534 - Epoch 2, Trajectory 97: Train Total Loss: 28.8845, Train Disp Loss: 22.0215, Train Chem Loss: 6.8629
+2025-05-21 23:40:35,853 - Epoch 2, Trajectory 98: Train Total Loss: 30.1101, Train Disp Loss: 23.7107, Train Chem Loss: 6.3993
+2025-05-21 23:40:39,158 - Epoch 2, Trajectory 99: Train Total Loss: 30.6919, Train Disp Loss: 24.7002, Train Chem Loss: 5.9918
+2025-05-21 23:40:42,469 - Epoch 2, Trajectory 100: Train Total Loss: 31.6484, Train Disp Loss: 25.6841, Train Chem Loss: 5.9643
+2025-05-21 23:40:43,385 - Epoch 2, Trajectory 1: Rollout MSE = 0.000110, Rollout Disp MSE = 0.000104, Rollout Chem MSE = 0.000005
+2025-05-21 23:40:44,301 - Epoch 2, Trajectory 2: Rollout MSE = 0.000233, Rollout Disp MSE = 0.000117, Rollout Chem MSE = 0.000006
+2025-05-21 23:40:45,217 - Epoch 2, Trajectory 3: Rollout MSE = 0.000383, Rollout Disp MSE = 0.000130, Rollout Chem MSE = 0.000020
+2025-05-21 23:40:46,131 - Epoch 2, Trajectory 4: Rollout MSE = 0.000576, Rollout Disp MSE = 0.000157, Rollout Chem MSE = 0.000036
+2025-05-21 23:40:47,048 - Epoch 2, Trajectory 5: Rollout MSE = 0.000814, Rollout Disp MSE = 0.000186, Rollout Chem MSE = 0.000053
+2025-05-21 23:40:47,963 - Epoch 2, Trajectory 6: Rollout MSE = 0.001100, Rollout Disp MSE = 0.000213, Rollout Chem MSE = 0.000073
+2025-05-21 23:40:48,878 - Epoch 2, Trajectory 7: Rollout MSE = 0.001379, Rollout Disp MSE = 0.000195, Rollout Chem MSE = 0.000083
+2025-05-21 23:40:49,793 - Epoch 2, Trajectory 8: Rollout MSE = 0.001690, Rollout Disp MSE = 0.000216, Rollout Chem MSE = 0.000095
+2025-05-21 23:40:50,708 - Epoch 2, Trajectory 9: Rollout MSE = 0.002026, Rollout Disp MSE = 0.000234, Rollout Chem MSE = 0.000103
+2025-05-21 23:40:51,624 - Epoch 2, Trajectory 10: Rollout MSE = 0.002378, Rollout Disp MSE = 0.000246, Rollout Chem MSE = 0.000106
+2025-05-21 23:40:52,538 - Epoch 2, Trajectory 11: Rollout MSE = 0.002490, Rollout Disp MSE = 0.000095, Rollout Chem MSE = 0.000017
+2025-05-21 23:40:53,453 - Epoch 2, Trajectory 12: Rollout MSE = 0.002599, Rollout Disp MSE = 0.000106, Rollout Chem MSE = 0.000004
+2025-05-21 23:40:54,370 - Epoch 2, Trajectory 13: Rollout MSE = 0.002725, Rollout Disp MSE = 0.000116, Rollout Chem MSE = 0.000010
+2025-05-21 23:40:55,287 - Epoch 2, Trajectory 14: Rollout MSE = 0.002895, Rollout Disp MSE = 0.000146, Rollout Chem MSE = 0.000024
+2025-05-21 23:40:56,202 - Epoch 2, Trajectory 15: Rollout MSE = 0.003110, Rollout Disp MSE = 0.000171, Rollout Chem MSE = 0.000045
+2025-05-21 23:40:57,117 - Epoch 2, Trajectory 16: Rollout MSE = 0.003378, Rollout Disp MSE = 0.000197, Rollout Chem MSE = 0.000071
+2025-05-21 23:40:58,035 - Epoch 2, Trajectory 17: Rollout MSE = 0.003637, Rollout Disp MSE = 0.000178, Rollout Chem MSE = 0.000082
+2025-05-21 23:40:58,951 - Epoch 2, Trajectory 18: Rollout MSE = 0.003925, Rollout Disp MSE = 0.000197, Rollout Chem MSE = 0.000091
+2025-05-21 23:40:59,867 - Epoch 2, Trajectory 19: Rollout MSE = 0.004230, Rollout Disp MSE = 0.000208, Rollout Chem MSE = 0.000097
+2025-05-21 23:41:00,785 - Epoch 2, Trajectory 20: Rollout MSE = 0.004536, Rollout Disp MSE = 0.000212, Rollout Chem MSE = 0.000095
+2025-05-21 23:41:01,709 - Epoch 2, Trajectory 21: Rollout MSE = 0.004666, Rollout Disp MSE = 0.000091, Rollout Chem MSE = 0.000038
+2025-05-21 23:41:02,628 - Epoch 2, Trajectory 22: Rollout MSE = 0.004771, Rollout Disp MSE = 0.000099, Rollout Chem MSE = 0.000007
+2025-05-21 23:41:03,544 - Epoch 2, Trajectory 23: Rollout MSE = 0.004884, Rollout Disp MSE = 0.000108, Rollout Chem MSE = 0.000005
+2025-05-21 23:41:04,458 - Epoch 2, Trajectory 24: Rollout MSE = 0.005019, Rollout Disp MSE = 0.000120, Rollout Chem MSE = 0.000015
+2025-05-21 23:41:05,374 - Epoch 2, Trajectory 25: Rollout MSE = 0.005210, Rollout Disp MSE = 0.000156, Rollout Chem MSE = 0.000035
+2025-05-21 23:41:06,291 - Epoch 2, Trajectory 26: Rollout MSE = 0.005411, Rollout Disp MSE = 0.000144, Rollout Chem MSE = 0.000057
+2025-05-21 23:41:07,207 - Epoch 2, Trajectory 27: Rollout MSE = 0.005641, Rollout Disp MSE = 0.000159, Rollout Chem MSE = 0.000072
+2025-05-21 23:41:08,122 - Epoch 2, Trajectory 28: Rollout MSE = 0.005884, Rollout Disp MSE = 0.000167, Rollout Chem MSE = 0.000077
+2025-05-21 23:41:09,039 - Epoch 2, Trajectory 29: Rollout MSE = 0.006132, Rollout Disp MSE = 0.000170, Rollout Chem MSE = 0.000078
+2025-05-21 23:41:09,957 - Epoch 2, Trajectory 30: Rollout MSE = 0.006381, Rollout Disp MSE = 0.000171, Rollout Chem MSE = 0.000077
+2025-05-21 23:41:10,873 - Epoch 2, Trajectory 31: Rollout MSE = 0.006545, Rollout Disp MSE = 0.000092, Rollout Chem MSE = 0.000072
+2025-05-21 23:41:11,789 - Epoch 2, Trajectory 32: Rollout MSE = 0.006659, Rollout Disp MSE = 0.000097, Rollout Chem MSE = 0.000017
+2025-05-21 23:41:12,705 - Epoch 2, Trajectory 33: Rollout MSE = 0.006763, Rollout Disp MSE = 0.000100, Rollout Chem MSE = 0.000004
+2025-05-21 23:41:13,621 - Epoch 2, Trajectory 34: Rollout MSE = 0.006874, Rollout Disp MSE = 0.000102, Rollout Chem MSE = 0.000008
+2025-05-21 23:41:14,535 - Epoch 2, Trajectory 35: Rollout MSE = 0.007003, Rollout Disp MSE = 0.000107, Rollout Chem MSE = 0.000023
+2025-05-21 23:41:15,452 - Epoch 2, Trajectory 36: Rollout MSE = 0.007171, Rollout Disp MSE = 0.000122, Rollout Chem MSE = 0.000046
+2025-05-21 23:41:16,366 - Epoch 2, Trajectory 37: Rollout MSE = 0.007356, Rollout Disp MSE = 0.000129, Rollout Chem MSE = 0.000056
+2025-05-21 23:41:17,280 - Epoch 2, Trajectory 38: Rollout MSE = 0.007540, Rollout Disp MSE = 0.000127, Rollout Chem MSE = 0.000057
+2025-05-21 23:41:18,195 - Epoch 2, Trajectory 39: Rollout MSE = 0.007723, Rollout Disp MSE = 0.000127, Rollout Chem MSE = 0.000057
+2025-05-21 23:41:19,109 - Epoch 2, Trajectory 40: Rollout MSE = 0.007907, Rollout Disp MSE = 0.000128, Rollout Chem MSE = 0.000056
+2025-05-21 23:41:20,023 - Epoch 2, Trajectory 41: Rollout MSE = 0.008125, Rollout Disp MSE = 0.000094, Rollout Chem MSE = 0.000125
+2025-05-21 23:41:20,938 - Epoch 2, Trajectory 42: Rollout MSE = 0.008257, Rollout Disp MSE = 0.000096, Rollout Chem MSE = 0.000035
+2025-05-21 23:41:21,852 - Epoch 2, Trajectory 43: Rollout MSE = 0.008359, Rollout Disp MSE = 0.000093, Rollout Chem MSE = 0.000009
+2025-05-21 23:41:22,767 - Epoch 2, Trajectory 44: Rollout MSE = 0.008453, Rollout Disp MSE = 0.000089, Rollout Chem MSE = 0.000005
+2025-05-21 23:41:23,682 - Epoch 2, Trajectory 45: Rollout MSE = 0.008555, Rollout Disp MSE = 0.000087, Rollout Chem MSE = 0.000014
+2025-05-21 23:41:24,597 - Epoch 2, Trajectory 46: Rollout MSE = 0.008676, Rollout Disp MSE = 0.000091, Rollout Chem MSE = 0.000030
+2025-05-21 23:41:25,512 - Epoch 2, Trajectory 47: Rollout MSE = 0.008804, Rollout Disp MSE = 0.000091, Rollout Chem MSE = 0.000036
+2025-05-21 23:41:26,429 - Epoch 2, Trajectory 48: Rollout MSE = 0.008928, Rollout Disp MSE = 0.000088, Rollout Chem MSE = 0.000037
+2025-05-21 23:41:27,342 - Epoch 2, Trajectory 49: Rollout MSE = 0.009049, Rollout Disp MSE = 0.000086, Rollout Chem MSE = 0.000035
+2025-05-21 23:41:28,257 - Epoch 2, Trajectory 50: Rollout MSE = 0.009175, Rollout Disp MSE = 0.000090, Rollout Chem MSE = 0.000037
+2025-05-21 23:41:29,172 - Epoch 2, Trajectory 51: Rollout MSE = 0.009459, Rollout Disp MSE = 0.000094, Rollout Chem MSE = 0.000190
+2025-05-21 23:41:30,087 - Epoch 2, Trajectory 52: Rollout MSE = 0.009619, Rollout Disp MSE = 0.000092, Rollout Chem MSE = 0.000068
+2025-05-21 23:41:31,004 - Epoch 2, Trajectory 53: Rollout MSE = 0.009726, Rollout Disp MSE = 0.000086, Rollout Chem MSE = 0.000021
+2025-05-21 23:41:31,920 - Epoch 2, Trajectory 54: Rollout MSE = 0.009809, Rollout Disp MSE = 0.000077, Rollout Chem MSE = 0.000006
+2025-05-21 23:41:32,835 - Epoch 2, Trajectory 55: Rollout MSE = 0.009885, Rollout Disp MSE = 0.000068, Rollout Chem MSE = 0.000008
+2025-05-21 23:41:33,752 - Epoch 2, Trajectory 56: Rollout MSE = 0.009964, Rollout Disp MSE = 0.000063, Rollout Chem MSE = 0.000016
+2025-05-21 23:41:34,666 - Epoch 2, Trajectory 57: Rollout MSE = 0.010040, Rollout Disp MSE = 0.000057, Rollout Chem MSE = 0.000019
+2025-05-21 23:41:35,581 - Epoch 2, Trajectory 58: Rollout MSE = 0.010114, Rollout Disp MSE = 0.000054, Rollout Chem MSE = 0.000020
+2025-05-21 23:41:36,497 - Epoch 2, Trajectory 59: Rollout MSE = 0.010189, Rollout Disp MSE = 0.000055, Rollout Chem MSE = 0.000021
+2025-05-21 23:41:37,414 - Epoch 2, Trajectory 60: Rollout MSE = 0.010269, Rollout Disp MSE = 0.000057, Rollout Chem MSE = 0.000022
+2025-05-21 23:41:38,330 - Epoch 2, Trajectory 61: Rollout MSE = 0.010628, Rollout Disp MSE = 0.000089, Rollout Chem MSE = 0.000271
+2025-05-21 23:41:39,247 - Epoch 2, Trajectory 62: Rollout MSE = 0.010826, Rollout Disp MSE = 0.000082, Rollout Chem MSE = 0.000115
+2025-05-21 23:41:40,163 - Epoch 2, Trajectory 63: Rollout MSE = 0.010942, Rollout Disp MSE = 0.000073, Rollout Chem MSE = 0.000044
+2025-05-21 23:41:41,081 - Epoch 2, Trajectory 64: Rollout MSE = 0.011018, Rollout Disp MSE = 0.000061, Rollout Chem MSE = 0.000015
+2025-05-21 23:41:41,999 - Epoch 2, Trajectory 65: Rollout MSE = 0.011073, Rollout Disp MSE = 0.000049, Rollout Chem MSE = 0.000006
+2025-05-21 23:41:42,917 - Epoch 2, Trajectory 66: Rollout MSE = 0.011122, Rollout Disp MSE = 0.000042, Rollout Chem MSE = 0.000008
+2025-05-21 23:41:43,834 - Epoch 2, Trajectory 67: Rollout MSE = 0.011167, Rollout Disp MSE = 0.000036, Rollout Chem MSE = 0.000008
+2025-05-21 23:41:44,750 - Epoch 2, Trajectory 68: Rollout MSE = 0.011207, Rollout Disp MSE = 0.000032, Rollout Chem MSE = 0.000008
+2025-05-21 23:41:45,667 - Epoch 2, Trajectory 69: Rollout MSE = 0.011246, Rollout Disp MSE = 0.000031, Rollout Chem MSE = 0.000009
+2025-05-21 23:41:46,584 - Epoch 2, Trajectory 70: Rollout MSE = 0.011289, Rollout Disp MSE = 0.000032, Rollout Chem MSE = 0.000011
+2025-05-21 23:41:47,503 - Epoch 2, Trajectory 71: Rollout MSE = 0.011744, Rollout Disp MSE = 0.000078, Rollout Chem MSE = 0.000376
+2025-05-21 23:41:48,419 - Epoch 2, Trajectory 72: Rollout MSE = 0.011994, Rollout Disp MSE = 0.000067, Rollout Chem MSE = 0.000183
+2025-05-21 23:41:49,337 - Epoch 2, Trajectory 73: Rollout MSE = 0.012134, Rollout Disp MSE = 0.000055, Rollout Chem MSE = 0.000085
+2025-05-21 23:41:50,254 - Epoch 2, Trajectory 74: Rollout MSE = 0.012214, Rollout Disp MSE = 0.000042, Rollout Chem MSE = 0.000038
+2025-05-21 23:41:51,175 - Epoch 2, Trajectory 75: Rollout MSE = 0.012260, Rollout Disp MSE = 0.000031, Rollout Chem MSE = 0.000015
+2025-05-21 23:41:52,097 - Epoch 2, Trajectory 76: Rollout MSE = 0.012291, Rollout Disp MSE = 0.000024, Rollout Chem MSE = 0.000007
+2025-05-21 23:41:53,020 - Epoch 2, Trajectory 77: Rollout MSE = 0.012315, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000004
+2025-05-21 23:41:53,945 - Epoch 2, Trajectory 78: Rollout MSE = 0.012336, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000003
+2025-05-21 23:41:54,866 - Epoch 2, Trajectory 79: Rollout MSE = 0.012357, Rollout Disp MSE = 0.000017, Rollout Chem MSE = 0.000003
+2025-05-21 23:41:55,785 - Epoch 2, Trajectory 80: Rollout MSE = 0.012379, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000004
+2025-05-21 23:41:56,703 - Epoch 2, Trajectory 81: Rollout MSE = 0.012957, Rollout Disp MSE = 0.000064, Rollout Chem MSE = 0.000514
+2025-05-21 23:41:57,621 - Epoch 2, Trajectory 82: Rollout MSE = 0.013282, Rollout Disp MSE = 0.000051, Rollout Chem MSE = 0.000273
+2025-05-21 23:41:58,542 - Epoch 2, Trajectory 83: Rollout MSE = 0.013465, Rollout Disp MSE = 0.000039, Rollout Chem MSE = 0.000144
+2025-05-21 23:41:59,462 - Epoch 2, Trajectory 84: Rollout MSE = 0.013566, Rollout Disp MSE = 0.000029, Rollout Chem MSE = 0.000073
+2025-05-21 23:42:00,381 - Epoch 2, Trajectory 85: Rollout MSE = 0.013623, Rollout Disp MSE = 0.000019, Rollout Chem MSE = 0.000037
+2025-05-21 23:42:01,300 - Epoch 2, Trajectory 86: Rollout MSE = 0.013654, Rollout Disp MSE = 0.000014, Rollout Chem MSE = 0.000018
+2025-05-21 23:42:02,219 - Epoch 2, Trajectory 87: Rollout MSE = 0.013676, Rollout Disp MSE = 0.000012, Rollout Chem MSE = 0.000010
+2025-05-21 23:42:03,138 - Epoch 2, Trajectory 88: Rollout MSE = 0.013692, Rollout Disp MSE = 0.000010, Rollout Chem MSE = 0.000006
+2025-05-21 23:42:04,058 - Epoch 2, Trajectory 89: Rollout MSE = 0.013707, Rollout Disp MSE = 0.000011, Rollout Chem MSE = 0.000004
+2025-05-21 23:42:04,979 - Epoch 2, Trajectory 90: Rollout MSE = 0.013722, Rollout Disp MSE = 0.000011, Rollout Chem MSE = 0.000004
+2025-05-21 23:42:05,897 - Epoch 2, Trajectory 91: Rollout MSE = 0.014440, Rollout Disp MSE = 0.000052, Rollout Chem MSE = 0.000666
+2025-05-21 23:42:06,819 - Epoch 2, Trajectory 92: Rollout MSE = 0.014852, Rollout Disp MSE = 0.000039, Rollout Chem MSE = 0.000372
+2025-05-21 23:42:07,738 - Epoch 2, Trajectory 93: Rollout MSE = 0.015093, Rollout Disp MSE = 0.000029, Rollout Chem MSE = 0.000212
+2025-05-21 23:42:08,658 - Epoch 2, Trajectory 94: Rollout MSE = 0.015232, Rollout Disp MSE = 0.000020, Rollout Chem MSE = 0.000120
+2025-05-21 23:42:09,577 - Epoch 2, Trajectory 95: Rollout MSE = 0.015313, Rollout Disp MSE = 0.000013, Rollout Chem MSE = 0.000068
+2025-05-21 23:42:10,497 - Epoch 2, Trajectory 96: Rollout MSE = 0.015358, Rollout Disp MSE = 0.000009, Rollout Chem MSE = 0.000037
+2025-05-21 23:42:11,416 - Epoch 2, Trajectory 97: Rollout MSE = 0.015390, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000025
+2025-05-21 23:42:12,388 - Epoch 2, Trajectory 98: Rollout MSE = 0.015414, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000017
+2025-05-21 23:42:13,318 - Epoch 2, Trajectory 99: Rollout MSE = 0.015432, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000011
+2025-05-21 23:42:14,237 - Epoch 2, Trajectory 100: Rollout MSE = 0.015448, Rollout Disp MSE = 0.000008, Rollout Chem MSE = 0.000008
+2025-05-21 23:42:17,505 - Epoch 3, Trajectory 1: Train Total Loss: 26.7861, Train Disp Loss: 19.5405, Train Chem Loss: 7.2456
+2025-05-21 23:42:20,596 - Epoch 3, Trajectory 2: Train Total Loss: 28.8826, Train Disp Loss: 22.2246, Train Chem Loss: 6.6580
+2025-05-21 23:42:23,695 - Epoch 3, Trajectory 3: Train Total Loss: 31.4973, Train Disp Loss: 25.4507, Train Chem Loss: 6.0465
+2025-05-21 23:42:26,783 - Epoch 3, Trajectory 4: Train Total Loss: 33.3154, Train Disp Loss: 27.5492, Train Chem Loss: 5.7662
+2025-05-21 23:42:29,871 - Epoch 3, Trajectory 5: Train Total Loss: 35.6353, Train Disp Loss: 29.3964, Train Chem Loss: 6.2389
+2025-05-21 23:42:32,958 - Epoch 3, Trajectory 6: Train Total Loss: 39.3032, Train Disp Loss: 33.6105, Train Chem Loss: 5.6927
+2025-05-21 23:42:36,042 - Epoch 3, Trajectory 7: Train Total Loss: 40.8260, Train Disp Loss: 34.5868, Train Chem Loss: 6.2392
+2025-05-21 23:42:39,131 - Epoch 3, Trajectory 8: Train Total Loss: 41.7931, Train Disp Loss: 36.1575, Train Chem Loss: 5.6355
+2025-05-21 23:42:42,227 - Epoch 3, Trajectory 9: Train Total Loss: 43.4003, Train Disp Loss: 37.2749, Train Chem Loss: 6.1253
+2025-05-21 23:42:45,314 - Epoch 3, Trajectory 10: Train Total Loss: 44.8993, Train Disp Loss: 38.6152, Train Chem Loss: 6.2840
+2025-05-21 23:42:48,412 - Epoch 3, Trajectory 11: Train Total Loss: 25.8864, Train Disp Loss: 17.5180, Train Chem Loss: 8.3684
+2025-05-21 23:42:51,509 - Epoch 3, Trajectory 12: Train Total Loss: 25.1956, Train Disp Loss: 18.2530, Train Chem Loss: 6.9426
+2025-05-21 23:42:54,611 - Epoch 3, Trajectory 13: Train Total Loss: 28.1257, Train Disp Loss: 20.6663, Train Chem Loss: 7.4595
+2025-05-21 23:42:57,694 - Epoch 3, Trajectory 14: Train Total Loss: 28.7449, Train Disp Loss: 22.4544, Train Chem Loss: 6.2906
+2025-05-21 23:43:00,794 - Epoch 3, Trajectory 15: Train Total Loss: 29.7215, Train Disp Loss: 23.7822, Train Chem Loss: 5.9393
+2025-05-21 23:43:03,889 - Epoch 3, Trajectory 16: Train Total Loss: 32.4071, Train Disp Loss: 26.8541, Train Chem Loss: 5.5530
+2025-05-21 23:43:06,991 - Epoch 3, Trajectory 17: Train Total Loss: 33.1854, Train Disp Loss: 27.4615, Train Chem Loss: 5.7240
+2025-05-21 23:43:10,082 - Epoch 3, Trajectory 18: Train Total Loss: 36.1767, Train Disp Loss: 30.0442, Train Chem Loss: 6.1325
+2025-05-21 23:43:13,168 - Epoch 3, Trajectory 19: Train Total Loss: 38.3792, Train Disp Loss: 32.5434, Train Chem Loss: 5.8358
+2025-05-21 23:43:16,253 - Epoch 3, Trajectory 20: Train Total Loss: 39.4957, Train Disp Loss: 33.8894, Train Chem Loss: 5.6062
+2025-05-21 23:43:19,338 - Epoch 3, Trajectory 21: Train Total Loss: 26.6546, Train Disp Loss: 16.2480, Train Chem Loss: 10.4066
+2025-05-21 23:43:22,427 - Epoch 3, Trajectory 22: Train Total Loss: 22.2584, Train Disp Loss: 15.9754, Train Chem Loss: 6.2830
+2025-05-21 23:43:25,512 - Epoch 3, Trajectory 23: Train Total Loss: 23.5932, Train Disp Loss: 17.2022, Train Chem Loss: 6.3910
+2025-05-21 23:43:28,613 - Epoch 3, Trajectory 24: Train Total Loss: 24.7178, Train Disp Loss: 18.7936, Train Chem Loss: 5.9242
+2025-05-21 23:43:31,712 - Epoch 3, Trajectory 25: Train Total Loss: 27.0509, Train Disp Loss: 20.8634, Train Chem Loss: 6.1875
+2025-05-21 23:43:34,800 - Epoch 3, Trajectory 26: Train Total Loss: 28.8348, Train Disp Loss: 23.3178, Train Chem Loss: 5.5170
+2025-05-21 23:43:37,881 - Epoch 3, Trajectory 27: Train Total Loss: 29.0115, Train Disp Loss: 23.6137, Train Chem Loss: 5.3977
+2025-05-21 23:43:40,970 - Epoch 3, Trajectory 28: Train Total Loss: 31.5064, Train Disp Loss: 26.3213, Train Chem Loss: 5.1851
+2025-05-21 23:43:44,065 - Epoch 3, Trajectory 29: Train Total Loss: 33.6743, Train Disp Loss: 28.1020, Train Chem Loss: 5.5723
+2025-05-21 23:43:47,159 - Epoch 3, Trajectory 30: Train Total Loss: 35.8498, Train Disp Loss: 30.0972, Train Chem Loss: 5.7526
+2025-05-21 23:43:50,236 - Epoch 3, Trajectory 31: Train Total Loss: 25.5660, Train Disp Loss: 14.6575, Train Chem Loss: 10.9084
+2025-05-21 23:43:53,316 - Epoch 3, Trajectory 32: Train Total Loss: 21.9101, Train Disp Loss: 14.8196, Train Chem Loss: 7.0905
+2025-05-21 23:43:56,406 - Epoch 3, Trajectory 33: Train Total Loss: 22.5167, Train Disp Loss: 16.4257, Train Chem Loss: 6.0910
+2025-05-21 23:43:59,480 - Epoch 3, Trajectory 34: Train Total Loss: 23.2941, Train Disp Loss: 17.2830, Train Chem Loss: 6.0110
+2025-05-21 23:44:02,581 - Epoch 3, Trajectory 35: Train Total Loss: 24.4554, Train Disp Loss: 18.4165, Train Chem Loss: 6.0389
+2025-05-21 23:44:05,668 - Epoch 3, Trajectory 36: Train Total Loss: 26.9144, Train Disp Loss: 20.9003, Train Chem Loss: 6.0141
+2025-05-21 23:44:08,760 - Epoch 3, Trajectory 37: Train Total Loss: 27.6663, Train Disp Loss: 22.0944, Train Chem Loss: 5.5719
+2025-05-21 23:44:11,849 - Epoch 3, Trajectory 38: Train Total Loss: 28.3380, Train Disp Loss: 23.1555, Train Chem Loss: 5.1826
+2025-05-21 23:44:14,950 - Epoch 3, Trajectory 39: Train Total Loss: 30.0419, Train Disp Loss: 24.7150, Train Chem Loss: 5.3269
+2025-05-21 23:44:18,033 - Epoch 3, Trajectory 40: Train Total Loss: 31.4381, Train Disp Loss: 26.1328, Train Chem Loss: 5.3053
+2025-05-21 23:44:21,109 - Epoch 3, Trajectory 41: Train Total Loss: 24.1019, Train Disp Loss: 13.6405, Train Chem Loss: 10.4614
+2025-05-21 23:44:24,196 - Epoch 3, Trajectory 42: Train Total Loss: 21.9757, Train Disp Loss: 14.2209, Train Chem Loss: 7.7548
+2025-05-21 23:44:27,295 - Epoch 3, Trajectory 43: Train Total Loss: 21.1637, Train Disp Loss: 14.4986, Train Chem Loss: 6.6651
+2025-05-21 23:44:30,376 - Epoch 3, Trajectory 44: Train Total Loss: 21.7897, Train Disp Loss: 15.4012, Train Chem Loss: 6.3885
+2025-05-21 23:44:33,460 - Epoch 3, Trajectory 45: Train Total Loss: 22.8945, Train Disp Loss: 17.2539, Train Chem Loss: 5.6406
+2025-05-21 23:44:36,562 - Epoch 3, Trajectory 46: Train Total Loss: 24.3858, Train Disp Loss: 18.3548, Train Chem Loss: 6.0310
+2025-05-21 23:44:39,660 - Epoch 3, Trajectory 47: Train Total Loss: 24.9248, Train Disp Loss: 19.6142, Train Chem Loss: 5.3106
+2025-05-21 23:44:42,761 - Epoch 3, Trajectory 48: Train Total Loss: 25.6075, Train Disp Loss: 20.5026, Train Chem Loss: 5.1049
+2025-05-21 23:44:45,858 - Epoch 3, Trajectory 49: Train Total Loss: 28.1194, Train Disp Loss: 22.6111, Train Chem Loss: 5.5083
+2025-05-21 23:44:48,952 - Epoch 3, Trajectory 50: Train Total Loss: 28.5539, Train Disp Loss: 23.0625, Train Chem Loss: 5.4913
+2025-05-21 23:44:52,042 - Epoch 3, Trajectory 51: Train Total Loss: 23.2181, Train Disp Loss: 12.1101, Train Chem Loss: 11.1080
+2025-05-21 23:44:55,138 - Epoch 3, Trajectory 52: Train Total Loss: 21.3957, Train Disp Loss: 13.4164, Train Chem Loss: 7.9793
+2025-05-21 23:44:58,230 - Epoch 3, Trajectory 53: Train Total Loss: 20.0383, Train Disp Loss: 13.5871, Train Chem Loss: 6.4512
+2025-05-21 23:45:01,318 - Epoch 3, Trajectory 54: Train Total Loss: 19.9994, Train Disp Loss: 14.2602, Train Chem Loss: 5.7391
+2025-05-21 23:45:04,418 - Epoch 3, Trajectory 55: Train Total Loss: 22.4113, Train Disp Loss: 16.1485, Train Chem Loss: 6.2628
+2025-05-21 23:45:07,508 - Epoch 3, Trajectory 56: Train Total Loss: 22.9803, Train Disp Loss: 17.1544, Train Chem Loss: 5.8258
+2025-05-21 23:45:10,591 - Epoch 3, Trajectory 57: Train Total Loss: 22.8928, Train Disp Loss: 17.9168, Train Chem Loss: 4.9760
+2025-05-21 23:45:13,690 - Epoch 3, Trajectory 58: Train Total Loss: 23.9192, Train Disp Loss: 18.8135, Train Chem Loss: 5.1057
+2025-05-21 23:45:16,777 - Epoch 3, Trajectory 59: Train Total Loss: 24.7422, Train Disp Loss: 19.9538, Train Chem Loss: 4.7884
+2025-05-21 23:45:19,832 - Epoch 3, Trajectory 60: Train Total Loss: 27.0407, Train Disp Loss: 21.9028, Train Chem Loss: 5.1378
+2025-05-21 23:45:22,889 - Epoch 3, Trajectory 61: Train Total Loss: 24.9789, Train Disp Loss: 11.8133, Train Chem Loss: 13.1656
+2025-05-21 23:45:25,978 - Epoch 3, Trajectory 62: Train Total Loss: 21.6179, Train Disp Loss: 12.8077, Train Chem Loss: 8.8102
+2025-05-21 23:45:29,074 - Epoch 3, Trajectory 63: Train Total Loss: 19.0668, Train Disp Loss: 12.5836, Train Chem Loss: 6.4833
+2025-05-21 23:45:32,170 - Epoch 3, Trajectory 64: Train Total Loss: 19.7185, Train Disp Loss: 13.2517, Train Chem Loss: 6.4669
+2025-05-21 23:45:35,269 - Epoch 3, Trajectory 65: Train Total Loss: 20.5516, Train Disp Loss: 15.0551, Train Chem Loss: 5.4965
+2025-05-21 23:45:38,363 - Epoch 3, Trajectory 66: Train Total Loss: 21.3284, Train Disp Loss: 15.3073, Train Chem Loss: 6.0210
+2025-05-21 23:45:41,443 - Epoch 3, Trajectory 67: Train Total Loss: 22.0126, Train Disp Loss: 17.2087, Train Chem Loss: 4.8038
+2025-05-21 23:45:44,538 - Epoch 3, Trajectory 68: Train Total Loss: 23.3504, Train Disp Loss: 17.5398, Train Chem Loss: 5.8107
+2025-05-21 23:45:47,630 - Epoch 3, Trajectory 69: Train Total Loss: 24.8297, Train Disp Loss: 19.9640, Train Chem Loss: 4.8657
+2025-05-21 23:45:50,722 - Epoch 3, Trajectory 70: Train Total Loss: 24.6696, Train Disp Loss: 19.7283, Train Chem Loss: 4.9413
+2025-05-21 23:45:53,821 - Epoch 3, Trajectory 71: Train Total Loss: 24.1133, Train Disp Loss: 10.7887, Train Chem Loss: 13.3246
+2025-05-21 23:45:56,929 - Epoch 3, Trajectory 72: Train Total Loss: 18.6642, Train Disp Loss: 11.1153, Train Chem Loss: 7.5488
+2025-05-21 23:46:00,026 - Epoch 3, Trajectory 73: Train Total Loss: 18.4347, Train Disp Loss: 11.6635, Train Chem Loss: 6.7712
+2025-05-21 23:46:03,118 - Epoch 3, Trajectory 74: Train Total Loss: 18.0909, Train Disp Loss: 12.1824, Train Chem Loss: 5.9085
+2025-05-21 23:46:06,197 - Epoch 3, Trajectory 75: Train Total Loss: 18.6465, Train Disp Loss: 12.9458, Train Chem Loss: 5.7006
+2025-05-21 23:46:09,277 - Epoch 3, Trajectory 76: Train Total Loss: 19.5305, Train Disp Loss: 14.3896, Train Chem Loss: 5.1409
+2025-05-21 23:46:12,369 - Epoch 3, Trajectory 77: Train Total Loss: 20.3409, Train Disp Loss: 15.4533, Train Chem Loss: 4.8876
+2025-05-21 23:46:15,441 - Epoch 3, Trajectory 78: Train Total Loss: 22.0464, Train Disp Loss: 17.2415, Train Chem Loss: 4.8049
+2025-05-21 23:46:18,531 - Epoch 3, Trajectory 79: Train Total Loss: 22.1625, Train Disp Loss: 17.3269, Train Chem Loss: 4.8356
+2025-05-21 23:46:21,598 - Epoch 3, Trajectory 80: Train Total Loss: 23.8079, Train Disp Loss: 18.7129, Train Chem Loss: 5.0950
+2025-05-21 23:46:24,701 - Epoch 3, Trajectory 81: Train Total Loss: 24.5655, Train Disp Loss: 10.9740, Train Chem Loss: 13.5916
+2025-05-21 23:46:27,764 - Epoch 3, Trajectory 82: Train Total Loss: 19.7724, Train Disp Loss: 11.1221, Train Chem Loss: 8.6503
+2025-05-21 23:46:30,836 - Epoch 3, Trajectory 83: Train Total Loss: 16.8214, Train Disp Loss: 10.3659, Train Chem Loss: 6.4555
+2025-05-21 23:46:33,901 - Epoch 3, Trajectory 84: Train Total Loss: 17.2253, Train Disp Loss: 11.3894, Train Chem Loss: 5.8359
+2025-05-21 23:46:36,964 - Epoch 3, Trajectory 85: Train Total Loss: 18.6615, Train Disp Loss: 13.4934, Train Chem Loss: 5.1681
+2025-05-21 23:46:40,031 - Epoch 3, Trajectory 86: Train Total Loss: 18.7122, Train Disp Loss: 13.8234, Train Chem Loss: 4.8888
+2025-05-21 23:46:43,101 - Epoch 3, Trajectory 87: Train Total Loss: 20.5483, Train Disp Loss: 14.4346, Train Chem Loss: 6.1137
+2025-05-21 23:46:46,168 - Epoch 3, Trajectory 88: Train Total Loss: 20.1161, Train Disp Loss: 15.4865, Train Chem Loss: 4.6296
+2025-05-21 23:46:49,236 - Epoch 3, Trajectory 89: Train Total Loss: 21.6770, Train Disp Loss: 16.9626, Train Chem Loss: 4.7144
+2025-05-21 23:46:52,297 - Epoch 3, Trajectory 90: Train Total Loss: 23.3276, Train Disp Loss: 18.3784, Train Chem Loss: 4.9492
+2025-05-21 23:46:55,370 - Epoch 3, Trajectory 91: Train Total Loss: 24.4871, Train Disp Loss: 10.2519, Train Chem Loss: 14.2353
+2025-05-21 23:46:58,438 - Epoch 3, Trajectory 92: Train Total Loss: 19.1184, Train Disp Loss: 10.0553, Train Chem Loss: 9.0631
+2025-05-21 23:47:01,511 - Epoch 3, Trajectory 93: Train Total Loss: 16.5682, Train Disp Loss: 10.1443, Train Chem Loss: 6.4239
+2025-05-21 23:47:04,571 - Epoch 3, Trajectory 94: Train Total Loss: 18.1242, Train Disp Loss: 11.4869, Train Chem Loss: 6.6372
+2025-05-21 23:47:07,643 - Epoch 3, Trajectory 95: Train Total Loss: 18.7698, Train Disp Loss: 13.1796, Train Chem Loss: 5.5903
+2025-05-21 23:47:10,703 - Epoch 3, Trajectory 96: Train Total Loss: 18.9126, Train Disp Loss: 13.3235, Train Chem Loss: 5.5890
+2025-05-21 23:47:13,770 - Epoch 3, Trajectory 97: Train Total Loss: 19.4409, Train Disp Loss: 14.2733, Train Chem Loss: 5.1676
+2025-05-21 23:47:16,829 - Epoch 3, Trajectory 98: Train Total Loss: 18.7790, Train Disp Loss: 14.2095, Train Chem Loss: 4.5696
+2025-05-21 23:47:19,900 - Epoch 3, Trajectory 99: Train Total Loss: 20.4524, Train Disp Loss: 15.9131, Train Chem Loss: 4.5394
+2025-05-21 23:47:22,962 - Epoch 3, Trajectory 100: Train Total Loss: 20.7336, Train Disp Loss: 16.1047, Train Chem Loss: 4.6289
+2025-05-21 23:47:23,876 - Epoch 3, Trajectory 1: Rollout MSE = 0.000028, Rollout Disp MSE = 0.000014, Rollout Chem MSE = 0.000014
+2025-05-21 23:47:24,792 - Epoch 3, Trajectory 2: Rollout MSE = 0.000044, Rollout Disp MSE = 0.000011, Rollout Chem MSE = 0.000005
+2025-05-21 23:47:25,708 - Epoch 3, Trajectory 3: Rollout MSE = 0.000065, Rollout Disp MSE = 0.000008, Rollout Chem MSE = 0.000013
+2025-05-21 23:47:26,622 - Epoch 3, Trajectory 4: Rollout MSE = 0.000099, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000026
+2025-05-21 23:47:27,535 - Epoch 3, Trajectory 5: Rollout MSE = 0.000152, Rollout Disp MSE = 0.000010, Rollout Chem MSE = 0.000044
+2025-05-21 23:47:28,449 - Epoch 3, Trajectory 6: Rollout MSE = 0.000230, Rollout Disp MSE = 0.000014, Rollout Chem MSE = 0.000063
+2025-05-21 23:47:29,363 - Epoch 3, Trajectory 7: Rollout MSE = 0.000332, Rollout Disp MSE = 0.000022, Rollout Chem MSE = 0.000080
+2025-05-21 23:47:30,277 - Epoch 3, Trajectory 8: Rollout MSE = 0.000455, Rollout Disp MSE = 0.000033, Rollout Chem MSE = 0.000090
+2025-05-21 23:47:31,194 - Epoch 3, Trajectory 9: Rollout MSE = 0.000600, Rollout Disp MSE = 0.000046, Rollout Chem MSE = 0.000098
+2025-05-21 23:47:32,110 - Epoch 3, Trajectory 10: Rollout MSE = 0.000765, Rollout Disp MSE = 0.000061, Rollout Chem MSE = 0.000104
+2025-05-21 23:47:33,023 - Epoch 3, Trajectory 11: Rollout MSE = 0.000806, Rollout Disp MSE = 0.000013, Rollout Chem MSE = 0.000029
+2025-05-21 23:47:33,939 - Epoch 3, Trajectory 12: Rollout MSE = 0.000823, Rollout Disp MSE = 0.000009, Rollout Chem MSE = 0.000008
+2025-05-21 23:47:34,854 - Epoch 3, Trajectory 13: Rollout MSE = 0.000840, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000009
+2025-05-21 23:47:35,770 - Epoch 3, Trajectory 14: Rollout MSE = 0.000867, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000021
+2025-05-21 23:47:36,814 - Epoch 3, Trajectory 15: Rollout MSE = 0.000914, Rollout Disp MSE = 0.000009, Rollout Chem MSE = 0.000038
+2025-05-21 23:47:37,734 - Epoch 3, Trajectory 16: Rollout MSE = 0.000983, Rollout Disp MSE = 0.000014, Rollout Chem MSE = 0.000055
+2025-05-21 23:47:38,650 - Epoch 3, Trajectory 17: Rollout MSE = 0.001076, Rollout Disp MSE = 0.000022, Rollout Chem MSE = 0.000071
+2025-05-21 23:47:39,567 - Epoch 3, Trajectory 18: Rollout MSE = 0.001189, Rollout Disp MSE = 0.000032, Rollout Chem MSE = 0.000081
+2025-05-21 23:47:40,482 - Epoch 3, Trajectory 19: Rollout MSE = 0.001324, Rollout Disp MSE = 0.000044, Rollout Chem MSE = 0.000091
+2025-05-21 23:47:41,402 - Epoch 3, Trajectory 20: Rollout MSE = 0.001471, Rollout Disp MSE = 0.000053, Rollout Chem MSE = 0.000094
+2025-05-21 23:47:42,319 - Epoch 3, Trajectory 21: Rollout MSE = 0.001535, Rollout Disp MSE = 0.000012, Rollout Chem MSE = 0.000052
+2025-05-21 23:47:43,236 - Epoch 3, Trajectory 22: Rollout MSE = 0.001558, Rollout Disp MSE = 0.000009, Rollout Chem MSE = 0.000015
+2025-05-21 23:47:44,155 - Epoch 3, Trajectory 23: Rollout MSE = 0.001573, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000008
+2025-05-21 23:47:45,072 - Epoch 3, Trajectory 24: Rollout MSE = 0.001595, Rollout Disp MSE = 0.000007, Rollout Chem MSE = 0.000015
+2025-05-21 23:47:45,990 - Epoch 3, Trajectory 25: Rollout MSE = 0.001630, Rollout Disp MSE = 0.000010, Rollout Chem MSE = 0.000025
+2025-05-21 23:47:46,907 - Epoch 3, Trajectory 26: Rollout MSE = 0.001682, Rollout Disp MSE = 0.000014, Rollout Chem MSE = 0.000038
+2025-05-21 23:47:47,824 - Epoch 3, Trajectory 27: Rollout MSE = 0.001757, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000053
+2025-05-21 23:47:48,744 - Epoch 3, Trajectory 28: Rollout MSE = 0.001854, Rollout Disp MSE = 0.000029, Rollout Chem MSE = 0.000068
+2025-05-21 23:47:49,662 - Epoch 3, Trajectory 29: Rollout MSE = 0.001965, Rollout Disp MSE = 0.000036, Rollout Chem MSE = 0.000076
+2025-05-21 23:47:50,580 - Epoch 3, Trajectory 30: Rollout MSE = 0.002085, Rollout Disp MSE = 0.000041, Rollout Chem MSE = 0.000078
+2025-05-21 23:47:51,496 - Epoch 3, Trajectory 31: Rollout MSE = 0.002186, Rollout Disp MSE = 0.000013, Rollout Chem MSE = 0.000088
+2025-05-21 23:47:52,414 - Epoch 3, Trajectory 32: Rollout MSE = 0.002224, Rollout Disp MSE = 0.000010, Rollout Chem MSE = 0.000028
+2025-05-21 23:47:53,331 - Epoch 3, Trajectory 33: Rollout MSE = 0.002244, Rollout Disp MSE = 0.000009, Rollout Chem MSE = 0.000012
+2025-05-21 23:47:54,249 - Epoch 3, Trajectory 34: Rollout MSE = 0.002264, Rollout Disp MSE = 0.000010, Rollout Chem MSE = 0.000010
+2025-05-21 23:47:55,167 - Epoch 3, Trajectory 35: Rollout MSE = 0.002289, Rollout Disp MSE = 0.000012, Rollout Chem MSE = 0.000014
+2025-05-21 23:47:56,086 - Epoch 3, Trajectory 36: Rollout MSE = 0.002328, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000024
+2025-05-21 23:47:57,002 - Epoch 3, Trajectory 37: Rollout MSE = 0.002387, Rollout Disp MSE = 0.000020, Rollout Chem MSE = 0.000039
+2025-05-21 23:47:57,920 - Epoch 3, Trajectory 38: Rollout MSE = 0.002464, Rollout Disp MSE = 0.000025, Rollout Chem MSE = 0.000052
+2025-05-21 23:47:58,839 - Epoch 3, Trajectory 39: Rollout MSE = 0.002549, Rollout Disp MSE = 0.000028, Rollout Chem MSE = 0.000057
+2025-05-21 23:47:59,758 - Epoch 3, Trajectory 40: Rollout MSE = 0.002639, Rollout Disp MSE = 0.000030, Rollout Chem MSE = 0.000060
+2025-05-21 23:48:00,676 - Epoch 3, Trajectory 41: Rollout MSE = 0.002788, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000133
+2025-05-21 23:48:01,594 - Epoch 3, Trajectory 42: Rollout MSE = 0.002848, Rollout Disp MSE = 0.000012, Rollout Chem MSE = 0.000049
+2025-05-21 23:48:02,515 - Epoch 3, Trajectory 43: Rollout MSE = 0.002880, Rollout Disp MSE = 0.000012, Rollout Chem MSE = 0.000020
+2025-05-21 23:48:03,436 - Epoch 3, Trajectory 44: Rollout MSE = 0.002903, Rollout Disp MSE = 0.000013, Rollout Chem MSE = 0.000010
+2025-05-21 23:48:04,357 - Epoch 3, Trajectory 45: Rollout MSE = 0.002926, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000008
+2025-05-21 23:48:05,275 - Epoch 3, Trajectory 46: Rollout MSE = 0.002957, Rollout Disp MSE = 0.000016, Rollout Chem MSE = 0.000015
+2025-05-21 23:48:06,190 - Epoch 3, Trajectory 47: Rollout MSE = 0.003000, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000025
+2025-05-21 23:48:07,106 - Epoch 3, Trajectory 48: Rollout MSE = 0.003054, Rollout Disp MSE = 0.000020, Rollout Chem MSE = 0.000034
+2025-05-21 23:48:08,022 - Epoch 3, Trajectory 49: Rollout MSE = 0.003115, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000040
+2025-05-21 23:48:08,938 - Epoch 3, Trajectory 50: Rollout MSE = 0.003179, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000042
+2025-05-21 23:48:09,854 - Epoch 3, Trajectory 51: Rollout MSE = 0.003391, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000195
+2025-05-21 23:48:10,769 - Epoch 3, Trajectory 52: Rollout MSE = 0.003487, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000081
+2025-05-21 23:48:11,684 - Epoch 3, Trajectory 53: Rollout MSE = 0.003540, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000037
+2025-05-21 23:48:12,600 - Epoch 3, Trajectory 54: Rollout MSE = 0.003574, Rollout Disp MSE = 0.000017, Rollout Chem MSE = 0.000017
+2025-05-21 23:48:13,518 - Epoch 3, Trajectory 55: Rollout MSE = 0.003602, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000010
+2025-05-21 23:48:14,432 - Epoch 3, Trajectory 56: Rollout MSE = 0.003629, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000010
+2025-05-21 23:48:15,348 - Epoch 3, Trajectory 57: Rollout MSE = 0.003661, Rollout Disp MSE = 0.000017, Rollout Chem MSE = 0.000015
+2025-05-21 23:48:16,264 - Epoch 3, Trajectory 58: Rollout MSE = 0.003698, Rollout Disp MSE = 0.000017, Rollout Chem MSE = 0.000020
+2025-05-21 23:48:17,180 - Epoch 3, Trajectory 59: Rollout MSE = 0.003739, Rollout Disp MSE = 0.000016, Rollout Chem MSE = 0.000025
+2025-05-21 23:48:18,098 - Epoch 3, Trajectory 60: Rollout MSE = 0.003782, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000027
+2025-05-21 23:48:19,016 - Epoch 3, Trajectory 61: Rollout MSE = 0.004087, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000284
+2025-05-21 23:48:19,934 - Epoch 3, Trajectory 62: Rollout MSE = 0.004235, Rollout Disp MSE = 0.000019, Rollout Chem MSE = 0.000129
+2025-05-21 23:48:20,850 - Epoch 3, Trajectory 63: Rollout MSE = 0.004317, Rollout Disp MSE = 0.000019, Rollout Chem MSE = 0.000063
+2025-05-21 23:48:21,767 - Epoch 3, Trajectory 64: Rollout MSE = 0.004370, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000032
+2025-05-21 23:48:22,682 - Epoch 3, Trajectory 65: Rollout MSE = 0.004408, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000017
+2025-05-21 23:48:23,596 - Epoch 3, Trajectory 66: Rollout MSE = 0.004436, Rollout Disp MSE = 0.000020, Rollout Chem MSE = 0.000009
+2025-05-21 23:48:24,512 - Epoch 3, Trajectory 67: Rollout MSE = 0.004463, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000008
+2025-05-21 23:48:25,429 - Epoch 3, Trajectory 68: Rollout MSE = 0.004488, Rollout Disp MSE = 0.000017, Rollout Chem MSE = 0.000009
+2025-05-21 23:48:26,349 - Epoch 3, Trajectory 69: Rollout MSE = 0.004515, Rollout Disp MSE = 0.000014, Rollout Chem MSE = 0.000012
+2025-05-21 23:48:27,267 - Epoch 3, Trajectory 70: Rollout MSE = 0.004543, Rollout Disp MSE = 0.000013, Rollout Chem MSE = 0.000015
+2025-05-21 23:48:28,186 - Epoch 3, Trajectory 71: Rollout MSE = 0.004972, Rollout Disp MSE = 0.000026, Rollout Chem MSE = 0.000404
+2025-05-21 23:48:29,104 - Epoch 3, Trajectory 72: Rollout MSE = 0.005195, Rollout Disp MSE = 0.000023, Rollout Chem MSE = 0.000199
+2025-05-21 23:48:30,021 - Epoch 3, Trajectory 73: Rollout MSE = 0.005321, Rollout Disp MSE = 0.000023, Rollout Chem MSE = 0.000103
+2025-05-21 23:48:30,936 - Epoch 3, Trajectory 74: Rollout MSE = 0.005403, Rollout Disp MSE = 0.000025, Rollout Chem MSE = 0.000057
+2025-05-21 23:48:31,853 - Epoch 3, Trajectory 75: Rollout MSE = 0.005459, Rollout Disp MSE = 0.000025, Rollout Chem MSE = 0.000032
+2025-05-21 23:48:32,771 - Epoch 3, Trajectory 76: Rollout MSE = 0.005498, Rollout Disp MSE = 0.000023, Rollout Chem MSE = 0.000016
+2025-05-21 23:48:33,690 - Epoch 3, Trajectory 77: Rollout MSE = 0.005527, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000008
+2025-05-21 23:48:34,609 - Epoch 3, Trajectory 78: Rollout MSE = 0.005550, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000004
+2025-05-21 23:48:35,526 - Epoch 3, Trajectory 79: Rollout MSE = 0.005569, Rollout Disp MSE = 0.000016, Rollout Chem MSE = 0.000004
+2025-05-21 23:48:36,443 - Epoch 3, Trajectory 80: Rollout MSE = 0.005587, Rollout Disp MSE = 0.000013, Rollout Chem MSE = 0.000005
+2025-05-21 23:48:37,358 - Epoch 3, Trajectory 81: Rollout MSE = 0.006163, Rollout Disp MSE = 0.000030, Rollout Chem MSE = 0.000546
+2025-05-21 23:48:38,274 - Epoch 3, Trajectory 82: Rollout MSE = 0.006484, Rollout Disp MSE = 0.000028, Rollout Chem MSE = 0.000293
+2025-05-21 23:48:39,191 - Epoch 3, Trajectory 83: Rollout MSE = 0.006672, Rollout Disp MSE = 0.000028, Rollout Chem MSE = 0.000160
+2025-05-21 23:48:40,110 - Epoch 3, Trajectory 84: Rollout MSE = 0.006796, Rollout Disp MSE = 0.000029, Rollout Chem MSE = 0.000095
+2025-05-21 23:48:41,055 - Epoch 3, Trajectory 85: Rollout MSE = 0.006883, Rollout Disp MSE = 0.000029, Rollout Chem MSE = 0.000058
+2025-05-21 23:48:41,990 - Epoch 3, Trajectory 86: Rollout MSE = 0.006942, Rollout Disp MSE = 0.000027, Rollout Chem MSE = 0.000033
+2025-05-21 23:48:42,913 - Epoch 3, Trajectory 87: Rollout MSE = 0.006984, Rollout Disp MSE = 0.000024, Rollout Chem MSE = 0.000017
+2025-05-21 23:48:43,829 - Epoch 3, Trajectory 88: Rollout MSE = 0.007013, Rollout Disp MSE = 0.000021, Rollout Chem MSE = 0.000009
+2025-05-21 23:48:44,773 - Epoch 3, Trajectory 89: Rollout MSE = 0.007036, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000004
+2025-05-21 23:48:45,715 - Epoch 3, Trajectory 90: Rollout MSE = 0.007053, Rollout Disp MSE = 0.000015, Rollout Chem MSE = 0.000002
+2025-05-21 23:48:46,653 - Epoch 3, Trajectory 91: Rollout MSE = 0.007792, Rollout Disp MSE = 0.000033, Rollout Chem MSE = 0.000706
+2025-05-21 23:48:47,586 - Epoch 3, Trajectory 92: Rollout MSE = 0.008224, Rollout Disp MSE = 0.000033, Rollout Chem MSE = 0.000399
+2025-05-21 23:48:48,514 - Epoch 3, Trajectory 93: Rollout MSE = 0.008491, Rollout Disp MSE = 0.000033, Rollout Chem MSE = 0.000233
+2025-05-21 23:48:49,441 - Epoch 3, Trajectory 94: Rollout MSE = 0.008663, Rollout Disp MSE = 0.000033, Rollout Chem MSE = 0.000139
+2025-05-21 23:48:50,367 - Epoch 3, Trajectory 95: Rollout MSE = 0.008790, Rollout Disp MSE = 0.000034, Rollout Chem MSE = 0.000093
+2025-05-21 23:48:51,293 - Epoch 3, Trajectory 96: Rollout MSE = 0.008880, Rollout Disp MSE = 0.000032, Rollout Chem MSE = 0.000058
+2025-05-21 23:48:52,218 - Epoch 3, Trajectory 97: Rollout MSE = 0.008943, Rollout Disp MSE = 0.000029, Rollout Chem MSE = 0.000035
+2025-05-21 23:48:53,145 - Epoch 3, Trajectory 98: Rollout MSE = 0.008988, Rollout Disp MSE = 0.000025, Rollout Chem MSE = 0.000020
+2025-05-21 23:48:54,071 - Epoch 3, Trajectory 99: Rollout MSE = 0.009022, Rollout Disp MSE = 0.000022, Rollout Chem MSE = 0.000012
+2025-05-21 23:48:54,997 - Epoch 3, Trajectory 100: Rollout MSE = 0.009045, Rollout Disp MSE = 0.000018, Rollout Chem MSE = 0.000006
+2025-05-21 23:48:58,548 - Epoch 4, Trajectory 1: Train Total Loss: 18.1697, Train Disp Loss: 12.4751, Train Chem Loss: 5.6946
+2025-05-21 23:49:01,656 - Epoch 4, Trajectory 2: Train Total Loss: 18.9008, Train Disp Loss: 14.0184, Train Chem Loss: 4.8824
+2025-05-21 23:49:04,725 - Epoch 4, Trajectory 3: Train Total Loss: 22.1653, Train Disp Loss: 17.5443, Train Chem Loss: 4.6210
+2025-05-21 23:49:07,801 - Epoch 4, Trajectory 4: Train Total Loss: 23.0176, Train Disp Loss: 18.4704, Train Chem Loss: 4.5472
+2025-05-21 23:49:10,875 - Epoch 4, Trajectory 5: Train Total Loss: 24.4237, Train Disp Loss: 19.6699, Train Chem Loss: 4.7538
+2025-05-21 23:49:13,952 - Epoch 4, Trajectory 6: Train Total Loss: 25.2884, Train Disp Loss: 20.5572, Train Chem Loss: 4.7312
+2025-05-21 23:49:17,020 - Epoch 4, Trajectory 7: Train Total Loss: 27.4865, Train Disp Loss: 22.6519, Train Chem Loss: 4.8346
+2025-05-21 23:49:20,104 - Epoch 4, Trajectory 8: Train Total Loss: 29.7955, Train Disp Loss: 24.9398, Train Chem Loss: 4.8558
+2025-05-21 23:49:23,174 - Epoch 4, Trajectory 9: Train Total Loss: 29.9997, Train Disp Loss: 25.3656, Train Chem Loss: 4.6341
+2025-05-21 23:49:26,240 - Epoch 4, Trajectory 10: Train Total Loss: 31.1999, Train Disp Loss: 26.6327, Train Chem Loss: 4.5672
+2025-05-21 23:49:29,322 - Epoch 4, Trajectory 11: Train Total Loss: 21.8388, Train Disp Loss: 13.3927, Train Chem Loss: 8.4461
+2025-05-21 23:49:32,393 - Epoch 4, Trajectory 12: Train Total Loss: 17.8483, Train Disp Loss: 12.6917, Train Chem Loss: 5.1566
+2025-05-21 23:49:35,466 - Epoch 4, Trajectory 13: Train Total Loss: 19.4407, Train Disp Loss: 14.3490, Train Chem Loss: 5.0917
+2025-05-21 23:49:38,546 - Epoch 4, Trajectory 14: Train Total Loss: 19.9655, Train Disp Loss: 15.1530, Train Chem Loss: 4.8124
+2025-05-21 23:49:41,621 - Epoch 4, Trajectory 15: Train Total Loss: 22.3820, Train Disp Loss: 17.7664, Train Chem Loss: 4.6156
+2025-05-21 23:49:44,698 - Epoch 4, Trajectory 16: Train Total Loss: 22.4603, Train Disp Loss: 18.1771, Train Chem Loss: 4.2832
+2025-05-21 23:49:47,771 - Epoch 4, Trajectory 17: Train Total Loss: 24.6051, Train Disp Loss: 19.9719, Train Chem Loss: 4.6333
+2025-05-21 23:49:50,848 - Epoch 4, Trajectory 18: Train Total Loss: 26.2112, Train Disp Loss: 21.7198, Train Chem Loss: 4.4914
+2025-05-21 23:49:53,934 - Epoch 4, Trajectory 19: Train Total Loss: 27.7554, Train Disp Loss: 23.3122, Train Chem Loss: 4.4432
+2025-05-21 23:49:57,013 - Epoch 4, Trajectory 20: Train Total Loss: 28.7124, Train Disp Loss: 24.0575, Train Chem Loss: 4.6548
+2025-05-21 23:50:00,097 - Epoch 4, Trajectory 21: Train Total Loss: 20.9077, Train Disp Loss: 12.0014, Train Chem Loss: 8.9063
+2025-05-21 23:50:03,169 - Epoch 4, Trajectory 22: Train Total Loss: 17.0899, Train Disp Loss: 11.6703, Train Chem Loss: 5.4196
+2025-05-21 23:50:06,240 - Epoch 4, Trajectory 23: Train Total Loss: 17.4764, Train Disp Loss: 12.5306, Train Chem Loss: 4.9458
+2025-05-21 23:50:09,315 - Epoch 4, Trajectory 24: Train Total Loss: 17.9890, Train Disp Loss: 13.2934, Train Chem Loss: 4.6956
+2025-05-21 23:50:12,393 - Epoch 4, Trajectory 25: Train Total Loss: 19.5880, Train Disp Loss: 14.7833, Train Chem Loss: 4.8047
+2025-05-21 23:50:15,480 - Epoch 4, Trajectory 26: Train Total Loss: 20.7946, Train Disp Loss: 16.3765, Train Chem Loss: 4.4181
+2025-05-21 23:50:18,555 - Epoch 4, Trajectory 27: Train Total Loss: 23.2261, Train Disp Loss: 18.5131, Train Chem Loss: 4.7130
+2025-05-21 23:50:21,646 - Epoch 4, Trajectory 28: Train Total Loss: 22.7799, Train Disp Loss: 18.1726, Train Chem Loss: 4.6074
+2025-05-21 23:50:24,729 - Epoch 4, Trajectory 29: Train Total Loss: 25.8761, Train Disp Loss: 21.1668, Train Chem Loss: 4.7093
+2025-05-21 23:50:27,806 - Epoch 4, Trajectory 30: Train Total Loss: 25.7216, Train Disp Loss: 21.4847, Train Chem Loss: 4.2369
+2025-05-21 23:50:30,885 - Epoch 4, Trajectory 31: Train Total Loss: 20.0476, Train Disp Loss: 10.7299, Train Chem Loss: 9.3177
+2025-05-21 23:50:33,965 - Epoch 4, Trajectory 32: Train Total Loss: 16.3649, Train Disp Loss: 10.5893, Train Chem Loss: 5.7756
+2025-05-21 23:50:37,044 - Epoch 4, Trajectory 33: Train Total Loss: 16.9593, Train Disp Loss: 11.6936, Train Chem Loss: 5.2657
+2025-05-21 23:50:40,115 - Epoch 4, Trajectory 34: Train Total Loss: 16.6727, Train Disp Loss: 12.2974, Train Chem Loss: 4.3754
+2025-05-21 23:50:43,198 - Epoch 4, Trajectory 35: Train Total Loss: 19.1883, Train Disp Loss: 14.2848, Train Chem Loss: 4.9036
+2025-05-21 23:50:46,283 - Epoch 4, Trajectory 36: Train Total Loss: 19.3451, Train Disp Loss: 14.8956, Train Chem Loss: 4.4495
+2025-05-21 23:50:49,356 - Epoch 4, Trajectory 37: Train Total Loss: 19.7810, Train Disp Loss: 15.2914, Train Chem Loss: 4.4896
+2025-05-21 23:50:52,438 - Epoch 4, Trajectory 38: Train Total Loss: 22.2508, Train Disp Loss: 17.4988, Train Chem Loss: 4.7520
+2025-05-21 23:50:55,519 - Epoch 4, Trajectory 39: Train Total Loss: 22.6072, Train Disp Loss: 18.2558, Train Chem Loss: 4.3514
+2025-05-21 23:50:58,598 - Epoch 4, Trajectory 40: Train Total Loss: 24.0560, Train Disp Loss: 19.7761, Train Chem Loss: 4.2799
+2025-05-21 23:51:01,673 - Epoch 4, Trajectory 41: Train Total Loss: 19.9113, Train Disp Loss: 10.6469, Train Chem Loss: 9.2644
+2025-05-21 23:51:04,751 - Epoch 4, Trajectory 42: Train Total Loss: 16.9644, Train Disp Loss: 10.5222, Train Chem Loss: 6.4422
+2025-05-21 23:51:07,828 - Epoch 4, Trajectory 43: Train Total Loss: 16.2920, Train Disp Loss: 10.9636, Train Chem Loss: 5.3284
+2025-05-21 23:51:10,911 - Epoch 4, Trajectory 44: Train Total Loss: 16.7496, Train Disp Loss: 11.9223, Train Chem Loss: 4.8273
+2025-05-21 23:51:13,993 - Epoch 4, Trajectory 45: Train Total Loss: 18.2992, Train Disp Loss: 13.9662, Train Chem Loss: 4.3329
+2025-05-21 23:51:17,079 - Epoch 4, Trajectory 46: Train Total Loss: 18.3437, Train Disp Loss: 13.7471, Train Chem Loss: 4.5966
+2025-05-21 23:51:20,157 - Epoch 4, Trajectory 47: Train Total Loss: 19.5264, Train Disp Loss: 15.1894, Train Chem Loss: 4.3371
+2025-05-21 23:51:23,234 - Epoch 4, Trajectory 48: Train Total Loss: 21.1869, Train Disp Loss: 16.1054, Train Chem Loss: 5.0815
+2025-05-21 23:51:26,309 - Epoch 4, Trajectory 49: Train Total Loss: 21.8071, Train Disp Loss: 17.5968, Train Chem Loss: 4.2103
+2025-05-21 23:51:29,390 - Epoch 4, Trajectory 50: Train Total Loss: 22.8881, Train Disp Loss: 18.4658, Train Chem Loss: 4.4224
+2025-05-21 23:51:32,471 - Epoch 4, Trajectory 51: Train Total Loss: 21.2821, Train Disp Loss: 10.5135, Train Chem Loss: 10.7686
+2025-05-21 23:51:35,553 - Epoch 4, Trajectory 52: Train Total Loss: 16.2251, Train Disp Loss: 9.7101, Train Chem Loss: 6.5150
+2025-05-21 23:51:38,633 - Epoch 4, Trajectory 53: Train Total Loss: 16.1289, Train Disp Loss: 10.4193, Train Chem Loss: 5.7096
+2025-05-21 23:51:41,714 - Epoch 4, Trajectory 54: Train Total Loss: 15.8645, Train Disp Loss: 10.6450, Train Chem Loss: 5.2194
+2025-05-21 23:51:44,799 - Epoch 4, Trajectory 55: Train Total Loss: 18.0351, Train Disp Loss: 13.1478, Train Chem Loss: 4.8873
+2025-05-21 23:51:47,880 - Epoch 4, Trajectory 56: Train Total Loss: 16.4993, Train Disp Loss: 12.1397, Train Chem Loss: 4.3596
+2025-05-21 23:51:50,962 - Epoch 4, Trajectory 57: Train Total Loss: 18.2354, Train Disp Loss: 13.8795, Train Chem Loss: 4.3560
+2025-05-21 23:51:54,049 - Epoch 4, Trajectory 58: Train Total Loss: 19.6414, Train Disp Loss: 15.2350, Train Chem Loss: 4.4065
+2025-05-21 23:51:57,134 - Epoch 4, Trajectory 59: Train Total Loss: 20.4484, Train Disp Loss: 16.2666, Train Chem Loss: 4.1817
+2025-05-21 23:52:00,216 - Epoch 4, Trajectory 60: Train Total Loss: 21.5873, Train Disp Loss: 17.2929, Train Chem Loss: 4.2944
+2025-05-21 23:52:03,298 - Epoch 4, Trajectory 61: Train Total Loss: 23.2089, Train Disp Loss: 11.1193, Train Chem Loss: 12.0896
+2025-05-21 23:52:06,565 - Epoch 4, Trajectory 62: Train Total Loss: 16.9271, Train Disp Loss: 9.7739, Train Chem Loss: 7.1532
+2025-05-21 23:52:09,898 - Epoch 4, Trajectory 63: Train Total Loss: 14.7154, Train Disp Loss: 8.9708, Train Chem Loss: 5.7446
+2025-05-21 23:52:12,983 - Epoch 4, Trajectory 64: Train Total Loss: 16.6670, Train Disp Loss: 11.8199, Train Chem Loss: 4.8471
+2025-05-21 23:52:16,318 - Epoch 4, Trajectory 65: Train Total Loss: 15.7805, Train Disp Loss: 11.0079, Train Chem Loss: 4.7726
+2025-05-21 23:52:19,652 - Epoch 4, Trajectory 66: Train Total Loss: 16.8679, Train Disp Loss: 12.1030, Train Chem Loss: 4.7649
+2025-05-21 23:52:22,985 - Epoch 4, Trajectory 67: Train Total Loss: 18.3737, Train Disp Loss: 13.6105, Train Chem Loss: 4.7632
+2025-05-21 23:52:26,324 - Epoch 4, Trajectory 68: Train Total Loss: 18.3065, Train Disp Loss: 14.0171, Train Chem Loss: 4.2894
+2025-05-21 23:52:29,659 - Epoch 4, Trajectory 69: Train Total Loss: 20.1047, Train Disp Loss: 15.6653, Train Chem Loss: 4.4394
+2025-05-21 23:52:32,995 - Epoch 4, Trajectory 70: Train Total Loss: 19.7209, Train Disp Loss: 15.5571, Train Chem Loss: 4.1638
+2025-05-21 23:52:36,331 - Epoch 4, Trajectory 71: Train Total Loss: 22.9992, Train Disp Loss: 10.4464, Train Chem Loss: 12.5527
+2025-05-21 23:52:39,665 - Epoch 4, Trajectory 72: Train Total Loss: 15.5098, Train Disp Loss: 8.9719, Train Chem Loss: 6.5379
+2025-05-21 23:52:42,999 - Epoch 4, Trajectory 73: Train Total Loss: 15.9634, Train Disp Loss: 10.0199, Train Chem Loss: 5.9435
+2025-05-21 23:52:46,334 - Epoch 4, Trajectory 74: Train Total Loss: 14.7895, Train Disp Loss: 9.6038, Train Chem Loss: 5.1857
+2025-05-21 23:52:49,668 - Epoch 4, Trajectory 75: Train Total Loss: 15.3716, Train Disp Loss: 10.7630, Train Chem Loss: 4.6086
+2025-05-21 23:52:53,004 - Epoch 4, Trajectory 76: Train Total Loss: 16.1309, Train Disp Loss: 11.5872, Train Chem Loss: 4.5436
+2025-05-21 23:52:56,338 - Epoch 4, Trajectory 77: Train Total Loss: 17.4386, Train Disp Loss: 12.5785, Train Chem Loss: 4.8600
+2025-05-21 23:52:59,673 - Epoch 4, Trajectory 78: Train Total Loss: 17.8224, Train Disp Loss: 13.6467, Train Chem Loss: 4.1756
+2025-05-21 23:53:03,009 - Epoch 4, Trajectory 79: Train Total Loss: 19.0747, Train Disp Loss: 14.6871, Train Chem Loss: 4.3876
+2025-05-21 23:53:06,344 - Epoch 4, Trajectory 80: Train Total Loss: 20.1117, Train Disp Loss: 15.4809, Train Chem Loss: 4.6308
+2025-05-21 23:53:09,679 - Epoch 4, Trajectory 81: Train Total Loss: 21.9770, Train Disp Loss: 10.1344, Train Chem Loss: 11.8426
+2025-05-21 23:53:13,017 - Epoch 4, Trajectory 82: Train Total Loss: 16.7823, Train Disp Loss: 9.3371, Train Chem Loss: 7.4452
+2025-05-21 23:53:16,355 - Epoch 4, Trajectory 83: Train Total Loss: 15.0789, Train Disp Loss: 9.0390, Train Chem Loss: 6.0399
+2025-05-21 23:53:19,692 - Epoch 4, Trajectory 84: Train Total Loss: 16.3279, Train Disp Loss: 10.3844, Train Chem Loss: 5.9435
+2025-05-21 23:53:23,027 - Epoch 4, Trajectory 85: Train Total Loss: 15.0571, Train Disp Loss: 10.4168, Train Chem Loss: 4.6403
+2025-05-21 23:53:26,361 - Epoch 4, Trajectory 86: Train Total Loss: 15.3518, Train Disp Loss: 10.6469, Train Chem Loss: 4.7049
+2025-05-21 23:53:29,697 - Epoch 4, Trajectory 87: Train Total Loss: 16.7068, Train Disp Loss: 12.2626, Train Chem Loss: 4.4442
+2025-05-21 23:53:33,033 - Epoch 4, Trajectory 88: Train Total Loss: 17.6133, Train Disp Loss: 13.1982, Train Chem Loss: 4.4150
+2025-05-21 23:53:36,368 - Epoch 4, Trajectory 89: Train Total Loss: 18.6699, Train Disp Loss: 14.0617, Train Chem Loss: 4.6082
