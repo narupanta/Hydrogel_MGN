@@ -82,6 +82,87 @@ class HydrogelDataset(Dataset):
                     node_type = node_type)
     def get_name(self, idx) :
         return self.file_name_list[idx]
+    
+
+class HydrogelNonLinearDataset(Dataset):
+    def __init__(self, data_dir, add_targets, split_frames, add_noise, time_window):
+        """
+        Generates synthetic dataset for material deformation use case.
+
+        Args:
+            num_graphs (int): Number of graphs in the dataset.
+            num_nodes (int): Number of nodes per graph.
+            num_features (int): Number of features per node.
+            num_material_params (int): Number of material parameters.
+        """
+        super(HydrogelNonLinearDataset, self).__init__()
+        self.data_dir = data_dir
+        self.add_targets = add_targets
+        self.add_noise = add_noise
+        self.time_window = time_window
+        self.split_frames = split_frames
+        self.file_name_list = [filename for filename in sorted(os.listdir(data_dir)) if not os.path.isdir(os.path.join(data_dir, filename))]
+    def __len__(self):
+        return len(self.file_name_list)
+
+    def __getitem__(self, idx):
+        # Randomly generate node features
+        file_name = self.file_name_list[idx]
+        data = np.load(os.path.join(self.data_dir, file_name))
+
+        decomposed_connectivity = triangles_to_edges(torch.tensor(data['node_connectivity'], dtype = torch.int))['two_way_connectivity']
+        world_pos = torch.tensor(data["world_pos"], dtype=torch.float)
+        chem_pot = torch.tensor(data["chem_pot"], dtype=torch.float).unsqueeze(-1)
+        mesh_pos = torch.tensor(data["mesh_pos"], dtype=torch.float)
+
+        cells = torch.tensor(data['node_connectivity'])
+        node_type = torch.tensor(data["node_type"], dtype = torch.long).squeeze(-1)
+        mat_param_D = torch.ones((node_type.shape[0], 1)) * float(file_name.split("_")[1].lstrip("D"))
+        mat_param_X = torch.ones((node_type.shape[0], 1)) * float(file_name.split("_")[2].lstrip("X").rstrip(".npz"))
+        # edge_index = torch.cat((decomposed_connectivity[0].reshape(1, -1), decomposed_connectivity[1].reshape(1, -1)), dim=0)
+        senders, receivers = decomposed_connectivity[0], decomposed_connectivity[1]
+        if self.add_targets :
+            target_world_pos = torch.stack([world_pos[i + 1 : i + 1 + self.time_window] for i in range(len(world_pos) - self.time_window)], dim=0)
+            target_chem_pot = torch.stack([chem_pot[i + 1 : i + 1 + self.time_window] for i in range(len(chem_pot) - self.time_window)], dim=0)
+        if self.split_frames & self.add_targets :
+            #list of data (frame)
+            frames = []
+            for idx in range(target_world_pos.shape[0]) :
+                world_pos_t = world_pos[idx]
+                target_world_pos_t = target_world_pos[idx]
+                chem_pot_t = chem_pot[idx]
+                target_chem_pot_t = target_chem_pot[idx]
+                if self.add_noise :
+                    world_pos_noise_scale = (torch.max(world_pos) - torch.min(world_pos)) * 0.01
+                    chem_pot_noise_scale = (torch.max(chem_pot) - torch.min(chem_pot)) * 0.01
+                    world_pos_noise = torch.zeros_like(world_pos_t) + world_pos_noise_scale * torch.randn_like(world_pos_t)
+                    chem_pot_noise = torch.zeros_like(chem_pot_t) + chem_pot_noise_scale * torch.randn_like(chem_pot_t)
+                    world_pos_t += world_pos_noise
+                    chem_pot_t += chem_pot_noise
+                frame = Data(world_pos = world_pos_t, 
+                             target_world_pos = target_world_pos_t, 
+                             chem_pot = chem_pot_t,
+                             target_chem_pot = target_chem_pot_t,
+                             mesh_pos = mesh_pos,  
+                             senders = senders, 
+                             receivers = receivers, 
+                             cells = cells,
+                             node_type = node_type,
+                             mat_param_D = mat_param_D,
+                             mat_param_X = mat_param_X)
+                frames.append(frame)
+            return frames
+
+
+        return Data(world_pos = world_pos, 
+                    chem_pot = chem_pot,
+                    mesh_pos = mesh_pos,  
+                    senders = senders, 
+                    receivers = receivers, 
+                    cells = cells,
+                    node_type = node_type)
+    def get_name(self, idx) :
+        return self.file_name_list[idx]
 
 if __name__ == "__main__" :
     data_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/dataset"
