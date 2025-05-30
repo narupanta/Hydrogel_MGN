@@ -157,6 +157,9 @@ class EncodeProcessDecode(torch.nn.Module):
         # delta_temperature = network_output
         cur_world_pos = graph.world_pos.unsqueeze(0).expand(self._time_window, -1, -1)
         cur_chem_pot = graph.chem_pot.unsqueeze(0).expand(self._time_window, -1, -1)
+        dirichlet_nodes = graph.node_type == 1
+        delta[:, dirichlet_nodes, 0] = 0
+        delta[:, dirichlet_nodes, 1] = 0 
         next_world_pos = cur_world_pos + delta[:, :, :2]
         next_chem_pot = cur_chem_pot + delta[:, :, 2:]
         return next_world_pos, next_chem_pot
@@ -180,7 +183,7 @@ class EncodeProcessDecode(torch.nn.Module):
 
         error = (output - target_normalized) ** 2               # (num_nodes,)
         disp_loss = torch.mean(torch.sum(error[:, loss_mask, :2], dim = 2), dim = 1)
-        chem_pot_loss = torch.mean(torch.sum(error[:, loss_mask, 2:], dim = 2), dim = 1)     # scalar
+        chem_pot_loss = torch.mean(torch.sum(error[:, :, 2:], dim = 2), dim = 1)     # scalar
         window_avg_disp_loss, window_avg_chem_loss = torch.mean(disp_loss), torch.mean(chem_pot_loss)
         total_loss = window_avg_disp_loss + window_avg_chem_loss
         return total_loss, window_avg_disp_loss, window_avg_chem_loss

@@ -117,8 +117,8 @@ class HydrogelNonLinearDataset(Dataset):
 
         cells = torch.tensor(data['node_connectivity'])
         node_type = torch.tensor(data["node_type"], dtype = torch.long).squeeze(-1)
-        mat_param_D = torch.ones((node_type.shape[0], 1)) * float(file_name.split("_")[1].lstrip("D"))
-        mat_param_X = torch.ones((node_type.shape[0], 1)) * float(file_name.split("_")[2].lstrip("X").rstrip(".npz"))
+        mat_param_D = torch.full(size = (node_type.shape[0], 1), fill_value = float(data["mat_param_D"]), dtype=torch.float)
+        mat_param_X = torch.full(size = (node_type.shape[0], 1), fill_value = float(data["mat_param_X"]), dtype=torch.float)
         # edge_index = torch.cat((decomposed_connectivity[0].reshape(1, -1), decomposed_connectivity[1].reshape(1, -1)), dim=0)
         senders, receivers = decomposed_connectivity[0], decomposed_connectivity[1]
         if self.add_targets :

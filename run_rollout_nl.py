@@ -55,13 +55,14 @@ def rollout(model, data, time_window):
 
         world_pos_mse_tensor = torch.cat([world_pos_mse_tensor, window_world_pos_mse])  # (time_window,)
         chem_pot_mse_tensor = torch.cat([chem_pot_mse_tensor, window_chem_pot_mse])
+        
         pred_world_pos_list.append(pred_world_pos)
-        pred_chem_pot_list.append(gt_world_pos)
+        gt_world_pos_list.append(gt_world_pos)
 
         pred_chem_pot_list.append(pred_chem_pot)
         gt_chem_pot_list.append(gt_chem_pot)
 
-        print(f"[t={t}] | MSE: {torch.mean(window_world_pos_mse):.4f}")
+        # print(f"[t={t}] | MSE: {torch.mean(window_world_pos_mse):.4f}")
 
     return dict(
         mesh_pos=initial_state.mesh_pos,

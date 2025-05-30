@@ -10,7 +10,7 @@ from core.model_graphnet_nl import EncodeProcessDecode
 import numpy as np
 from tqdm import tqdm
 from core.utils import * 
-from run_rollout import rollout
+from run_rollout_nl import rollout
 # def load_dataset( , add_target = False, add_noise = False, split = False) :
 #     file_path = r"/home/narupanta/Hiwi/weld-simulation-pinn/weld-simulation-pinn/npz_files/weld_fem_60mm.npz"
 #     dataset = np.load(file_path)
@@ -33,7 +33,7 @@ if __name__ == "__main__" :
     logger = logging.getLogger()
     time_window = 1
     dataset = HydrogelNonLinearDataset(data_dir, add_targets= True, split_frames=True, add_noise = True, time_window = time_window)
-    model = EncodeProcessDecode(node_feature_size = 4,
+    model = EncodeProcessDecode(node_feature_size = 5,
                                 mesh_edge_feature_size = 7,
                                 output_size = 3,
                                 latent_size = 128,
@@ -44,7 +44,7 @@ if __name__ == "__main__" :
     model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=5e-3)
     num_epochs = 2
-    traj_pass = 5
+    traj_pass = 10
     train_loss_per_epochs = []
     is_accumulate_normalizer_phase = True
     best_val_loss = float('inf')
@@ -86,7 +86,7 @@ if __name__ == "__main__" :
                 val_disp_loss = torch.mean(output['disp_mse'])
                 val_chem_loss = torch.mean(output['chem_pot_mse'])
                 val_total_loss += val_disp_loss + val_chem_loss
-                logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_total_loss:.6f}, Rollout Disp MSE = {val_disp_loss:.6f}, Rollout Chem MSE = {val_chem_loss:.6f}")
+                logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_disp_loss + val_chem_loss:.6f}, Rollout Disp MSE = {val_disp_loss:.6f}, Rollout Chem MSE = {val_chem_loss:.6f}")
 
             avg_train_loss = train_total_loss / len(dataset)
             avg_rollout_loss = val_total_loss / len(dataset)
