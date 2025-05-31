@@ -156,23 +156,23 @@ class EncodeProcessDecode(torch.nn.Module):
         delta = output_normalizer.inverse(network_output)
         # delta_temperature = network_output
         cur_world_pos = graph.world_pos.unsqueeze(0).expand(self._time_window, -1, -1)
-        cur_chem_pot = graph.chem_pot.unsqueeze(0).expand(self._time_window, -1, -1)
+        cur_pvf = graph.pvf.unsqueeze(0).expand(self._time_window, -1, -1)
         dirichlet_nodes = graph.node_type == 1
         delta[:, dirichlet_nodes, 0] = 0
         delta[:, dirichlet_nodes, 1] = 0 
         next_world_pos = cur_world_pos + delta[:, :, :2]
-        next_chem_pot = cur_chem_pot + delta[:, :, 2:]
-        return next_world_pos, next_chem_pot
+        next_pvf = cur_pvf + delta[:, :, 2:]
+        return next_world_pos, next_pvf
     def loss(self, output, graph) :
         world_pos = graph.world_pos                       # (num_nodes,)
         target_world_pos  = graph.target_world_pos                # (num_nodes, time_window)
         disp = target_world_pos - world_pos.unsqueeze(0).expand(self._time_window, -1, -1) # (num_nodes, time_window)
 
-        chem_pot = graph.chem_pot                       # (num_nodes,)
-        target_chem_pot = graph.target_chem_pot                # (num_nodes, time_window)
-        delta_chem_pot = target_chem_pot - chem_pot.unsqueeze(0).expand(self._time_window, -1, -1)  # (num_nodes, time_window)
+        pvf = graph.pvf                       # (num_nodes,)
+        target_pvf = graph.target_pvf                # (num_nodes, time_window)
+        delta_pvf = target_pvf - pvf.unsqueeze(0).expand(self._time_window, -1, -1)  # (num_nodes, time_window)
 
-        target_delta = torch.cat([disp, delta_chem_pot], dim = -1)
+        target_delta = torch.cat([disp, delta_pvf], dim = -1)
 
 
         normalizer = self.get_output_normalizer()
@@ -183,10 +183,10 @@ class EncodeProcessDecode(torch.nn.Module):
 
         error = (output - target_normalized) ** 2               # (num_nodes,)
         disp_loss = torch.mean(torch.sum(error[:, loss_mask, :2], dim = 2), dim = 1)
-        chem_pot_loss = torch.mean(torch.sum(error[:, :, 2:], dim = 2), dim = 1)     # scalar
-        window_avg_disp_loss, window_avg_chem_loss = torch.mean(disp_loss), torch.mean(chem_pot_loss)
-        total_loss = window_avg_disp_loss + window_avg_chem_loss
-        return total_loss, window_avg_disp_loss, window_avg_chem_loss
+        pvf_loss = torch.mean(torch.sum(error[:, :, 2:], dim = 2), dim = 1)     # scalar
+        window_avg_disp_loss, window_avg_pvf_loss = torch.mean(disp_loss), torch.mean(pvf_loss)
+        total_loss = window_avg_disp_loss + window_avg_pvf_loss
+        return total_loss, window_avg_disp_loss, window_avg_pvf_loss
     def fem_physical_loss(self, network_output, graph) :
         return # to be developed
     def pde_physical_loss(self, network_output, graph) :
@@ -207,7 +207,7 @@ class EncodeProcessDecode(torch.nn.Module):
     def _build_node_latent_features(self, graph) :
         node_type_onehot = F.one_hot(graph.node_type).to(torch.float)
         node_latent_features = torch.cat(
-            (graph.chem_pot, graph.mat_param_D, graph.mat_param_X, node_type_onehot), 
+            (graph.pvf, graph.mat_param_D, graph.mat_param_X, node_type_onehot), 
             dim = -1
             )
         return node_latent_features
@@ -217,10 +217,10 @@ class EncodeProcessDecode(torch.nn.Module):
         norm_rel_mesh_pos = torch.norm(relative_mesh_pos, dim=-1, keepdim=True)
         relative_world_pos = graph.world_pos[senders] - graph.world_pos[receivers]
         norm_rel_world_pos = torch.norm(relative_mesh_pos, dim=-1, keepdim=True)
-        nodal_chem_pot_gradient = graph.chem_pot[senders] - graph.chem_pot[receivers]
+        nodal_pvf_gradient = graph.pvf[senders] - graph.pvf[receivers]
         # concatenate the mesh edges data together
         mesh_edge_features = torch.cat(
-            (relative_mesh_pos, norm_rel_mesh_pos, relative_world_pos, norm_rel_world_pos, nodal_chem_pot_gradient), 
+            (relative_mesh_pos, norm_rel_mesh_pos, relative_world_pos, norm_rel_world_pos, nodal_pvf_gradient), 
             dim = -1
             )
         return mesh_edge_features

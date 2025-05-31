@@ -45,15 +45,16 @@ if __name__ == "__main__" :
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=5e-3)
     num_epochs = 2
     traj_pass = 10
+    test_round = 15
     train_loss_per_epochs = []
     is_accumulate_normalizer_phase = True
     best_val_loss = float('inf')
     for epoch in range(num_epochs):
         model.train()
         train_total_loss = 0
-        val_total_loss, val_disp_loss, val_chem_loss = 0, 0, 0
+        val_total_loss, val_disp_loss, val_pvf_loss = 0, [], []
         for traj_idx, trajectory in enumerate(dataset):  # assuming dataset.trajectories exists
-            traj_total_loss, traj_disp_loss, traj_chem_loss = 0, 0, 0
+            traj_total_loss, traj_disp_loss, traj_pvf_loss = 0, 0, 0
             train_loader = DataLoader(trajectory, batch_size=1, shuffle=True)
             loop = tqdm(enumerate(train_loader), total=len(train_loader), leave=False)
 
@@ -61,40 +62,43 @@ if __name__ == "__main__" :
                 batch = batch.to(device)
                 optimizer.zero_grad()
                 predictions = model(batch)
-                total_loss, disp_loss, chem_loss= model.loss(predictions, batch)
+                total_loss, disp_loss, pvf_loss= model.loss(predictions, batch)
 
                 if not is_accumulate_normalizer_phase:
                     total_loss.backward()
                     optimizer.step()
                     traj_total_loss += total_loss.item()
                     traj_disp_loss += disp_loss.item()
-                    traj_chem_loss += chem_loss.item()
+                    traj_pvf_loss += pvf_loss.item()
                     loop.set_description(f"Epoch {epoch + 1} Traj {traj_idx + 1}/{len(dataset)}")
                     loop.set_postfix({"Total Loss": f"{total_loss.item():.4f}",
                                       "Total Disp Loss": f"{disp_loss.item():.4f}",
-                                      "Total Chem Loss": f"{chem_loss.item():.4f}"})
+                                      "Total PVF Loss": f"{pvf_loss.item():.4f}"})
             if (traj_pass > 0) & is_accumulate_normalizer_phase:
                 traj_pass -= 1
             else :
                 is_accumulate_normalizer_phase = False
             train_total_loss += traj_total_loss
-            logger.info(f"Epoch {epoch+1}, Trajectory {traj_idx+1}: Train Total Loss: {traj_total_loss:.4f}, Train Disp Loss: {traj_disp_loss:.4f}, Train Chem Loss: {traj_chem_loss:.4f}")
-        if not is_accumulate_normalizer_phase:
-                # pass
-            for traj_idx, trajectory in enumerate(dataset):
-                output = rollout(model, trajectory, time_window)
-                val_disp_loss = torch.mean(output['disp_mse'])
-                val_chem_loss = torch.mean(output['chem_pot_mse'])
-                val_total_loss += val_disp_loss + val_chem_loss
-                logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_disp_loss + val_chem_loss:.6f}, Rollout Disp MSE = {val_disp_loss:.6f}, Rollout Chem MSE = {val_chem_loss:.6f}")
+            logger.info(f"Epoch {epoch+1}, Trajectory {traj_idx+1}: Train Total Loss: {traj_total_loss:.4f}, Train Disp Loss: {traj_disp_loss:.4f}, Train PVF Loss: {traj_pvf_loss:.4f}")
+            if test_round == 0 :
+                break
+            else :
+                test_round -= 1
 
-            avg_train_loss = train_total_loss / len(dataset)
-            avg_rollout_loss = val_total_loss / len(dataset)
-            train_loss_per_epochs.append(avg_train_loss)
-    
-            if avg_rollout_loss < best_val_loss:
-                best_val_loss = avg_rollout_loss
-                model.save_model(model_dir)
-                torch.save(optimizer.state_dict(), os.path.join(model_dir, "optimizer_state_dict.pth"))
+        if not is_accumulate_normalizer_phase:
+            if epoch%20 == 0 :
+                for traj_idx, trajectory in enumerate(dataset):
+                    output = rollout(model, trajectory, time_window)
+                    val_disp_loss = torch.mean(output['disp_mse'])
+                    val_pvf_loss = torch.mean(output['pvf_mse'])
+                    val_total_loss += val_disp_loss + val_pvf_loss
+                    logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_disp_loss + val_pvf_loss:.6f}, Rollout Disp MSE = {val_disp_loss:.6f}, Rollout Chem MSE = {val_pvf_loss:.6f}")
+
+                avg_train_loss = train_total_loss / len(dataset)
+                avg_rollout_loss = val_total_loss / len(dataset)
+        
+            model.save_model(model_dir)
+            torch.save(optimizer.state_dict(), os.path.join(model_dir, "optimizer_state_dict.pth"))
+            logger.info(f"Epoch {epoch + 1}/{num_epochs}, train loss: {avg_train_loss:.4f}, rollout loss: {avg_rollout_loss:.4e}")
             print(f"Epoch {epoch + 1}/{num_epochs}, train loss: {avg_train_loss:.4f}, rollout loss: {avg_rollout_loss:.4e}")
 

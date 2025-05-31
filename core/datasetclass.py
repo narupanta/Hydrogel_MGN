@@ -112,7 +112,7 @@ class HydrogelNonLinearDataset(Dataset):
 
         decomposed_connectivity = triangles_to_edges(torch.tensor(data['node_connectivity'], dtype = torch.int))['two_way_connectivity']
         world_pos = torch.tensor(data["world_pos"], dtype=torch.float)
-        chem_pot = torch.tensor(data["chem_pot"], dtype=torch.float).unsqueeze(-1)
+        pvf = torch.tensor(data["pvf"], dtype=torch.float).unsqueeze(-1)
         mesh_pos = torch.tensor(data["mesh_pos"], dtype=torch.float)
 
         cells = torch.tensor(data['node_connectivity'])
@@ -123,26 +123,26 @@ class HydrogelNonLinearDataset(Dataset):
         senders, receivers = decomposed_connectivity[0], decomposed_connectivity[1]
         if self.add_targets :
             target_world_pos = torch.stack([world_pos[i + 1 : i + 1 + self.time_window] for i in range(len(world_pos) - self.time_window)], dim=0)
-            target_chem_pot = torch.stack([chem_pot[i + 1 : i + 1 + self.time_window] for i in range(len(chem_pot) - self.time_window)], dim=0)
+            target_pvf = torch.stack([pvf[i + 1 : i + 1 + self.time_window] for i in range(len(pvf) - self.time_window)], dim=0)
         if self.split_frames & self.add_targets :
             #list of data (frame)
             frames = []
             for idx in range(target_world_pos.shape[0]) :
                 world_pos_t = world_pos[idx]
                 target_world_pos_t = target_world_pos[idx]
-                chem_pot_t = chem_pot[idx]
-                target_chem_pot_t = target_chem_pot[idx]
+                pvf_t = pvf[idx]
+                target_pvf_t = target_pvf[idx]
                 if self.add_noise :
                     world_pos_noise_scale = (torch.max(world_pos) - torch.min(world_pos)) * 0.01
-                    chem_pot_noise_scale = (torch.max(chem_pot) - torch.min(chem_pot)) * 0.01
+                    pvf_noise_scale = (torch.max(pvf) - torch.min(pvf)) * 0.01
                     world_pos_noise = torch.zeros_like(world_pos_t) + world_pos_noise_scale * torch.randn_like(world_pos_t)
-                    chem_pot_noise = torch.zeros_like(chem_pot_t) + chem_pot_noise_scale * torch.randn_like(chem_pot_t)
+                    pvf_noise = torch.zeros_like(pvf_t) + pvf_noise_scale * torch.randn_like(pvf_t)
                     world_pos_t += world_pos_noise
-                    chem_pot_t += chem_pot_noise
+                    pvf_t += pvf_noise
                 frame = Data(world_pos = world_pos_t, 
                              target_world_pos = target_world_pos_t, 
-                             chem_pot = chem_pot_t,
-                             target_chem_pot = target_chem_pot_t,
+                             pvf = pvf_t,
+                             target_pvf = target_pvf_t,
                              mesh_pos = mesh_pos,  
                              senders = senders, 
                              receivers = receivers, 
@@ -155,7 +155,7 @@ class HydrogelNonLinearDataset(Dataset):
 
 
         return Data(world_pos = world_pos, 
-                    chem_pot = chem_pot,
+                    pvf = pvf,
                     mesh_pos = mesh_pos,  
                     senders = senders, 
                     receivers = receivers, 

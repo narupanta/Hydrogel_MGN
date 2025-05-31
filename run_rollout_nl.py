@@ -30,37 +30,37 @@ def rollout(model, data, time_window):
 
     curr_graph = initial_state.clone()  # Start with first ground truth graph
     world_pos_mse_tensor = torch.zeros((1,), device = model._device)
-    chem_pot_mse_tensor = torch.zeros((1,), device = model._device)
+    pvf_mse_tensor = torch.zeros((1,), device = model._device)
     pred_world_pos_list = [curr_graph.world_pos.to(model._device)]
     gt_world_pos_list = [curr_graph.world_pos.to(model._device)]
-    pred_chem_pot_list = [curr_graph.chem_pot.to(model._device)]
-    gt_chem_pot_list = [curr_graph.chem_pot.to(model._device)]
+    pred_pvf_list = [curr_graph.pvf.to(model._device)]
+    gt_pvf_list = [curr_graph.pvf.to(model._device)]
     progress = tqdm(range(0, timesteps - time_window, time_window), desc="Rollout")
 
     for t in progress: 
         # === Predict next time_window temperatures ===
         with torch.no_grad():
-            pred_world_pos, pred_chem_pot = model.predict(curr_graph.to(device))  # (num_nodes, time_window)
+            pred_world_pos, pred_pvf = model.predict(curr_graph.to(device))  # (num_nodes, time_window)
             curr_graph.world_pos = pred_world_pos[-1, :, :].clone()
-            curr_graph.chem_pot = pred_chem_pot[-1, :, :].clone()  # use last timestep prediction for next input
+            curr_graph.pvf = pred_pvf[-1, :, :].clone()  # use last timestep prediction for next input
 
         # === Ground truth from data[t+1] to data[t+time_window] ===
         gt_world_pos = data[t].target_world_pos.to(device)
-        gt_chem_pot = data[t].target_chem_pot.to(device)
+        gt_pvf = data[t].target_pvf.to(device)
         window_world_pos_error = torch.sum((pred_world_pos - gt_world_pos) ** 2, dim = 2)
         window_world_pos_mse = torch.mean(window_world_pos_error, dim = 1)
 
-        window_chem_pot_error = torch.sum((pred_chem_pot - gt_chem_pot) ** 2, dim = 2)
-        window_chem_pot_mse = torch.mean(window_chem_pot_error, dim = 1)
+        window_pvf_error = torch.sum((pred_pvf - gt_pvf) ** 2, dim = 2)
+        window_pvf_mse = torch.mean(window_pvf_error, dim = 1)
 
         world_pos_mse_tensor = torch.cat([world_pos_mse_tensor, window_world_pos_mse])  # (time_window,)
-        chem_pot_mse_tensor = torch.cat([chem_pot_mse_tensor, window_chem_pot_mse])
+        pvf_mse_tensor = torch.cat([pvf_mse_tensor, window_pvf_mse])
         
         pred_world_pos_list.append(pred_world_pos)
         gt_world_pos_list.append(gt_world_pos)
 
-        pred_chem_pot_list.append(pred_chem_pot)
-        gt_chem_pot_list.append(gt_chem_pot)
+        pred_pvf_list.append(pred_pvf)
+        gt_pvf_list.append(gt_pvf)
 
         # print(f"[t={t}] | MSE: {torch.mean(window_world_pos_mse):.4f}")
 
@@ -70,10 +70,10 @@ def rollout(model, data, time_window):
         cells=initial_state.cells,
         predict_displacement=pred_world_pos_list,
         gt_displacement=gt_world_pos_list,
-        predict_chem_pot=pred_chem_pot_list,
-        gt_chem_pot=gt_chem_pot_list,
+        predict_pvf=pred_pvf_list,
+        gt_pvf=gt_pvf_list,
         disp_mse = world_pos_mse_tensor,
-        chem_pot_mse = chem_pot_mse_tensor
+        pvf_mse = pvf_mse_tensor
     )
 
 if __name__ == "__main__" :
