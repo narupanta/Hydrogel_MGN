@@ -158,8 +158,10 @@ class EncodeProcessDecode(torch.nn.Module):
         cur_world_pos = graph.world_pos.unsqueeze(0).expand(self._time_window, -1, -1)
         cur_pvf = graph.pvf.unsqueeze(0).expand(self._time_window, -1, -1)
         dirichlet_nodes = graph.node_type == 1
-        delta[:, dirichlet_nodes, 0] = 0
-        delta[:, dirichlet_nodes, 1] = 0 
+        left_node = graph.mesh_pos[:, 0] == torch.min(graph.mesh_pos[:, 0])
+        bottom_node = graph.mesh_pos[:, 1] == torch.min(graph.mesh_pos[:, 1])
+        delta[:, left_node, 0] = 0
+        delta[:, bottom_node, 1] = 0
         next_world_pos = cur_world_pos + delta[:, :, :2]
         next_pvf = cur_pvf + delta[:, :, 2:]
         return next_world_pos, next_pvf
@@ -179,10 +181,8 @@ class EncodeProcessDecode(torch.nn.Module):
         target_normalized = normalizer(target_delta)        # (num_nodes, time_window)
 
         node_type = graph.node_type                            # (num_nodes,)
-        loss_mask = node_type == 0                             # (num_nodes,)
-
         error = (output - target_normalized) ** 2               # (num_nodes,)
-        disp_loss = torch.mean(torch.sum(error[:, loss_mask, :2], dim = 2), dim = 1)
+        disp_loss = torch.mean(torch.sum(error[:, :, :2], dim = 2), dim = 1)
         pvf_loss = torch.mean(torch.sum(error[:, :, 2:], dim = 2), dim = 1)     # scalar
         window_avg_disp_loss, window_avg_pvf_loss = torch.mean(disp_loss), torch.mean(pvf_loss)
         total_loss = window_avg_disp_loss + window_avg_pvf_loss
