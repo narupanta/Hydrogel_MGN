@@ -85,84 +85,112 @@ class HydrogelDataset(Dataset):
     
 
 class HydrogelNonLinearDataset(Dataset):
-    def __init__(self, data_dir, add_targets, split_frames, add_noise, time_window):
-        """
-        Generates synthetic dataset for material deformation use case.
-
-        Args:
-            num_graphs (int): Number of graphs in the dataset.
-            num_nodes (int): Number of nodes per graph.
-            num_features (int): Number of features per node.
-            num_material_params (int): Number of material parameters.
-        """
-        super(HydrogelNonLinearDataset, self).__init__()
+    def __init__(
+        self,
+        data_dir,
+        add_targets=True,
+        split_frames=True,
+        add_noise=True,
+        time_window=1,
+        target_config=None  # {"world_pos": {"noise": 0.01}, "pvf": {"noise": 0.02}}
+    ):
+        super().__init__()
         self.data_dir = data_dir
         self.add_targets = add_targets
+        self.split_frames = split_frames
         self.add_noise = add_noise
         self.time_window = time_window
-        self.split_frames = split_frames
-        self.file_name_list = [filename for filename in sorted(os.listdir(data_dir)) if not os.path.isdir(os.path.join(data_dir, filename))]
+        self.target_config = target_config or {}
+        self.file_name_list = sorted([
+            f for f in os.listdir(data_dir) if not os.path.isdir(os.path.join(data_dir, f))
+        ])
+
     def __len__(self):
         return len(self.file_name_list)
 
     def __getitem__(self, idx):
-        # Randomly generate node features
         file_name = self.file_name_list[idx]
         data = np.load(os.path.join(self.data_dir, file_name))
 
-        decomposed_connectivity = triangles_to_edges(torch.tensor(data['node_connectivity'], dtype = torch.int))['two_way_connectivity']
         world_pos = torch.tensor(data["world_pos"], dtype=torch.float)
         pvf = torch.tensor(data["pvf"], dtype=torch.float).unsqueeze(-1)
         mesh_pos = torch.tensor(data["mesh_pos"], dtype=torch.float)
+        node_type = torch.tensor(data["node_type"], dtype=torch.long).squeeze(-1)
+        cells = torch.tensor(data["node_connectivity"], dtype=torch.long)
+        senders, receivers = triangles_to_edges(cells)["two_way_connectivity"]
 
-        cells = torch.tensor(data['node_connectivity'])
-        node_type = torch.tensor(data["node_type"], dtype = torch.long).squeeze(-1)
-        mat_param_D = torch.full(size = (node_type.shape[0], 1), fill_value = float(data["mat_param_D"]), dtype=torch.float)
-        mat_param_X = torch.full(size = (node_type.shape[0], 1), fill_value = float(data["mat_param_X"]), dtype=torch.float)
-        # edge_index = torch.cat((decomposed_connectivity[0].reshape(1, -1), decomposed_connectivity[1].reshape(1, -1)), dim=0)
-        senders, receivers = decomposed_connectivity[0], decomposed_connectivity[1]
-        if self.add_targets :
-            target_world_pos = torch.stack([world_pos[i + 1 : i + 1 + self.time_window] for i in range(len(world_pos) - self.time_window)], dim=0)
-            target_pvf = torch.stack([pvf[i + 1 : i + 1 + self.time_window] for i in range(len(pvf) - self.time_window)], dim=0)
-        if self.split_frames & self.add_targets :
-            #list of data (frame)
+        mat_param_D = torch.full((node_type.shape[0], 1), float(data["mat_param_D"]))
+        mat_param_X = torch.full((node_type.shape[0], 1), float(data["mat_param_X"]))
+
+        # Targets
+        targets = {}
+        if self.add_targets:
+            if "world_pos" in self.target_config:
+                targets["target_world_pos"] = torch.stack([
+                    world_pos[i + 1: i + 1 + self.time_window]
+                    for i in range(len(world_pos) - self.time_window)
+                ])
+            if "pvf" in self.target_config:
+                targets["target_pvf"] = torch.stack([
+                    pvf[i + 1: i + 1 + self.time_window]
+                    for i in range(len(pvf) - self.time_window)
+                ])
+
+        if self.split_frames and self.add_targets:
             frames = []
-            for idx in range(target_world_pos.shape[0]) :
-                world_pos_t = world_pos[idx]
-                target_world_pos_t = target_world_pos[idx]
-                pvf_t = pvf[idx]
-                target_pvf_t = target_pvf[idx]
-                if self.add_noise :
-                    world_pos_noise_scale = (torch.max(world_pos) - torch.min(world_pos)) * 0.01
-                    pvf_noise_scale = (torch.max(pvf) - torch.min(pvf)) * 0.01
-                    world_pos_noise = torch.zeros_like(world_pos_t) + world_pos_noise_scale * torch.randn_like(world_pos_t)
-                    pvf_noise = torch.zeros_like(pvf_t) + pvf_noise_scale * torch.randn_like(pvf_t)
-                    world_pos_t += world_pos_noise
-                    pvf_t += pvf_noise
-                frame = Data(world_pos = world_pos_t, 
-                             target_world_pos = target_world_pos_t, 
-                             pvf = pvf_t,
-                             target_pvf = target_pvf_t,
-                             mesh_pos = mesh_pos,  
-                             senders = senders, 
-                             receivers = receivers, 
-                             cells = cells,
-                             node_type = node_type,
-                             mat_param_D = mat_param_D,
-                             mat_param_X = mat_param_X)
-                frames.append(frame)
+            num_frames = len(world_pos) - self.time_window
+            for t in range(num_frames):
+                frame_data = {
+                    "world_pos": world_pos[t],
+                    "pvf": pvf[t],
+                    "mesh_pos": mesh_pos,
+                    "senders": senders,
+                    "receivers": receivers,
+                    "cells": cells,
+                    "node_type": node_type,
+                    "mat_param_D": mat_param_D,
+                    "mat_param_X": mat_param_X,
+                }
+
+                if "world_pos" in self.target_config:
+                    frame_data["target_world_pos"] = targets["target_world_pos"][t]
+                if "pvf" in self.target_config:
+                    frame_data["target_pvf"] = targets["target_pvf"][t]
+
+                if self.add_noise:
+                    if "world_pos" in self.target_config:
+                        noise = self.target_config["world_pos"].get("noise", 0.0)
+                        if noise > 0:
+                            edge_lengths = (mesh_pos[senders] - mesh_pos[receivers]).norm(dim=-1)
+                            avg_edge_length = edge_lengths.mean()
+                            frame_data["world_pos"] += avg_edge_length * noise * torch.randn_like(frame_data["world_pos"])
+
+                    if "pvf" in self.target_config:
+                        noise = self.target_config["pvf"].get("noise", 0.0)
+                        if noise > 0:
+                            frame_data["pvf"] += pvf.std() * noise * torch.randn_like(frame_data["pvf"])
+
+                frames.append(Data(**frame_data))
             return frames
 
+        # If not splitting into frames
+        full_data = {
+            "world_pos": world_pos,
+            "pvf": pvf,
+            "mesh_pos": mesh_pos,
+            "senders": senders,
+            "receivers": receivers,
+            "cells": cells,
+            "node_type": node_type,
+            "mat_param_D": mat_param_D,
+            "mat_param_X": mat_param_X,
+        }
+        return Data(**full_data)
 
-        return Data(world_pos = world_pos, 
-                    pvf = pvf,
-                    mesh_pos = mesh_pos,  
-                    senders = senders, 
-                    receivers = receivers, 
-                    cells = cells,
-                    node_type = node_type)
-    def get_name(self, idx) :
+    def get_name(self, idx):
         return self.file_name_list[idx]
+
+
 
 if __name__ == "__main__" :
     data_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/dataset"

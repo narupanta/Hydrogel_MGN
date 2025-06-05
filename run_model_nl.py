@@ -1,104 +1,188 @@
-import numpy as np
-from torch_geometric.data import Data
-import json
-import torch
-from torch_geometric.data import Data, Dataset
-from torch_geometric.loader import DataLoader
 import os
+import logging
+import yaml
+from pathlib import Path
+from tqdm import tqdm
+
+import torch
+from torch_geometric.loader import DataLoader
+
 from core.datasetclass import HydrogelNonLinearDataset
 from core.model_graphnet_nl import EncodeProcessDecode
-import numpy as np
-from tqdm import tqdm
-from core.utils import * 
+from core.utils import prepare_directories, logger_setup
 from run_rollout_nl import rollout
-# def load_dataset( , add_target = False, add_noise = False, split = False) :
-#     file_path = r"/home/narupanta/Hiwi/weld-simulation-pinn/weld-simulation-pinn/npz_files/weld_fem_60mm.npz"
-#     dataset = np.load(file_path)
 
-#     data = Data()
-#     return 
 
-# def learner() :
-    
-device = "cuda"
+def load_config(path="train_config.yml"):
+    with open(path, "r") as f:
+        return yaml.safe_load(f)
 
-if __name__ == "__main__" :
-    
-    data_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/dataset/nl_dataset"
-    output_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/trained_model"
-    run_dir = prepare_directories(output_dir)
-    model_dir = os.path.join(run_dir, 'model_checkpoint')
-    logs_dir = os.path.join(run_dir, "logs")
+
+def build_model(cfg, device):
+    m_cfg = cfg["model"]
+    model = EncodeProcessDecode(
+        node_feature_size=m_cfg["node_feature_size"],
+        mesh_edge_feature_size=m_cfg["mesh_edge_feature_size"],
+        output_size=m_cfg["output_size"],
+        latent_size=m_cfg["latent_size"],
+        timestep=m_cfg["timestep"],
+        time_window=cfg["training"]["time_window"],
+        device=device,
+        message_passing_steps=cfg["training"]["message_passing_steps"],
+    )
+    return model.to(device)
+
+
+def train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device):
     logger_setup(os.path.join(logs_dir, "logs.txt"))
     logger = logging.getLogger()
-    time_window = 1
-    dataset = HydrogelNonLinearDataset(data_dir, add_targets= True, split_frames=True, add_noise = True, time_window = time_window)
-    model = EncodeProcessDecode(node_feature_size = 5,
-                                mesh_edge_feature_size = 7,
-                                output_size = 3,
-                                latent_size = 128,
-                                timestep=1e-5,
-                                time_window=time_window,
-                                device=device,
-                                message_passing_steps = 15)
-    model.to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=5e-3)
-    num_epochs = 2
-    traj_pass = 10
-    test_round = 15
-    train_loss_per_epochs = []
-    is_accumulate_normalizer_phase = True
-    best_val_loss = float('inf')
+
+    best_val_loss = float("inf")
+    if cfg["paths"].get("model_dir") :
+        traj_pass = 0
+        is_accumulate_phase = False
+    else :
+        traj_pass = cfg["training"]["trial_passes"]
+        is_accumulate_phase = True
+    num_epochs = cfg["training"]["num_epochs"]
+    time_window = cfg["training"]["time_window"]
+
     for epoch in range(num_epochs):
         model.train()
         train_total_loss = 0
-        val_total_loss, val_disp_loss, val_pvf_loss = 0, [], []
-        for traj_idx, trajectory in enumerate(dataset):  # assuming dataset.trajectories exists
+        logger.info(f"==== Epoch {epoch + 1} ====")
+
+        for traj_idx, trajectory in enumerate(dataset):
             traj_total_loss, traj_disp_loss, traj_pvf_loss = 0, 0, 0
             train_loader = DataLoader(trajectory, batch_size=1, shuffle=True)
-            loop = tqdm(enumerate(train_loader), total=len(train_loader), leave=False)
+            loop = tqdm(train_loader, leave=False)
 
-            for idx_traj, batch in loop:
+            for batch in loop:
                 batch = batch.to(device)
                 optimizer.zero_grad()
                 predictions = model(batch)
-                total_loss, disp_loss, pvf_loss= model.loss(predictions, batch)
+                total_loss, disp_loss, pvf_loss = model.loss(predictions, batch)
 
-                if not is_accumulate_normalizer_phase:
+                if not is_accumulate_phase:
                     total_loss.backward()
                     optimizer.step()
                     traj_total_loss += total_loss.item()
-                    traj_disp_loss += disp_loss.item()
+                    traj_disp_loss += disp_loss.item() 
                     traj_pvf_loss += pvf_loss.item()
-                    loop.set_description(f"Epoch {epoch + 1} Traj {traj_idx + 1}/{len(dataset)}")
-                    loop.set_postfix({"Total Loss": f"{total_loss.item():.4f}",
-                                      "Total Disp Loss": f"{disp_loss.item():.4f}",
-                                      "Total PVF Loss": f"{pvf_loss.item():.4f}"})
-            if (traj_pass > 0) & is_accumulate_normalizer_phase:
+                    loop.set_description(f"Epoch {epoch + 1}, Traj {traj_idx + 1}")
+                    loop.set_postfix({
+                        "Loss": f"{total_loss.item():.4f}",
+                        "Disp": f"{disp_loss.item():.4f}",
+                        "PVF": f"{pvf_loss.item():.4f}"
+                    })
+
+            if traj_pass > 0 and is_accumulate_phase:
                 traj_pass -= 1
-            else :
-                is_accumulate_normalizer_phase = False
+            else:
+                is_accumulate_phase = False
+
             train_total_loss += traj_total_loss
-            logger.info(f"Epoch {epoch+1}, Trajectory {traj_idx+1}: Train Total Loss: {traj_total_loss:.4f}, Train Disp Loss: {traj_disp_loss:.4f}, Train PVF Loss: {traj_pvf_loss:.4f}")
-            if test_round == 0 :
-                break
-            else :
-                test_round -= 1
+            logger.info(
+                f"Trajectory {traj_idx + 1}: Train Loss: {traj_total_loss:.4f}, Disp Loss: {traj_disp_loss:.4f}, PVF Loss: {traj_pvf_loss:.4f}"
+            )
 
-        if not is_accumulate_normalizer_phase:
-            if epoch%20 == 0 :
-                for traj_idx, trajectory in enumerate(dataset):
-                    output = rollout(model, trajectory, time_window)
-                    val_disp_loss = torch.mean(output['disp_mse'])
-                    val_pvf_loss = torch.mean(output['pvf_mse'])
-                    val_total_loss += val_disp_loss + val_pvf_loss
-                    logger.info(f"Epoch {epoch + 1}, Trajectory {traj_idx + 1}: Rollout MSE = {val_disp_loss + val_pvf_loss:.6f}, Rollout Disp MSE = {val_disp_loss:.6f}, Rollout Chem MSE = {val_pvf_loss:.6f}")
+        # === Validation ===
+        if not is_accumulate_phase:
+            val_total_loss = 0.0
+            for traj_idx, trajectory in enumerate(dataset):
+                output = rollout(model, trajectory, time_window)
+                disp_mse = torch.mean(output["disp_mse"])
+                pvf_mse = torch.mean(output["pvf_mse"])
+                val_loss = disp_mse + pvf_mse
+                val_total_loss += val_loss.item()
 
-                avg_train_loss = train_total_loss / len(dataset)
-                avg_rollout_loss = val_total_loss / len(dataset)
-        
-            model.save_model(model_dir)
-            torch.save(optimizer.state_dict(), os.path.join(model_dir, "optimizer_state_dict.pth"))
-            logger.info(f"Epoch {epoch + 1}/{num_epochs}, train loss: {avg_train_loss:.4f}, rollout loss: {avg_rollout_loss:.4e}")
-            print(f"Epoch {epoch + 1}/{num_epochs}, train loss: {avg_train_loss:.4f}, rollout loss: {avg_rollout_loss:.4e}")
+                logger.info(
+                    f"Val Traj {traj_idx + 1}: Rollout MSE: {val_loss:.6e}, Disp MSE: {disp_mse:.6e}, PVF MSE: {pvf_mse:.6e}"
+                )
+
+            avg_train_loss = train_total_loss / len(dataset)
+            avg_val_loss = val_total_loss / len(dataset)
+
+            logger.info(f"Epoch {epoch + 1} Summary - Train Loss: {avg_train_loss:.4f}, Val Loss: {avg_val_loss:.6e}")
+            print(f"[Epoch {epoch + 1}/{num_epochs}] Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.6e}")
+
+            if avg_val_loss < best_val_loss:
+                model.save_model(model_dir)
+                torch.save(optimizer.state_dict(), os.path.join(model_dir, "optimizer_state_dict.pth"))
+                best_val_loss = avg_val_loss
+                logger.info("Checkpoint saved (best model so far).")
+
+
+def load_checkpoint_if_available(model, optimizer, model_dir):
+    optim_path = os.path.join(model_dir, "optimizer_state_dict.pth")
+
+    if os.path.exists(model_dir) and os.path.exists(optim_path):
+        model.load_model(model_dir)
+        optimizer.load_state_dict(torch.load(optim_path))
+        print(f"Resumed training from checkpoint at: {model_dir}")
+        return True
+    else:
+        print(f"Model path not found in: {model_dir}. Starting fresh.")
+        return False
+
+def setup_training_environment(cfg):
+    device = cfg["device"] if torch.cuda.is_available() else "cpu"
+    paths = cfg["paths"]
+
+    # Decide run_dir and logging/model paths
+    if paths.get("model_dir"):  # Resume from checkpoint
+        run_dir = prepare_directories(paths["output_dir"])
+        model_dir = paths["model_dir"]
+        logs_dir = os.path.join(run_dir, "logs")
+
+        config_summary_path = os.path.join(run_dir, "config_summary.yaml")
+        with open(config_summary_path, "w") as f:
+            yaml.dump(cfg, f, default_flow_style=False, sort_keys=False)
+
+    else:  # Start fresh training
+        run_dir = prepare_directories(paths["output_dir"])
+        model_dir = os.path.join(run_dir, "model_checkpoint")
+        logs_dir = os.path.join(run_dir, "logs")
+
+        # Save a clean summary of the config at start of training
+        config_summary_path = os.path.join(run_dir, "config_summary.yaml")
+        with open(config_summary_path, "w") as f:
+            yaml.dump(cfg, f, default_flow_style=False, sort_keys=False)
+
+    dataset = HydrogelNonLinearDataset(
+        paths["data_dir"],
+        add_targets=True,
+        split_frames=True,
+        add_noise=True,
+        time_window=cfg["training"]["time_window"],
+        target_config=cfg["training"]["target_config"]
+    )
+
+    model = build_model(cfg, device)
+    optimizer = torch.optim.Adam(
+        model.parameters(),
+        lr=float(cfg["training"]["learning_rate"]),
+        weight_decay=float(cfg["training"]["weight_decay"])
+    )
+
+    resumed = False
+    if paths.get("model_dir"):
+        resumed = load_checkpoint_if_available(model, optimizer, model_dir)
+
+    return model, optimizer, dataset, run_dir, model_dir, logs_dir, cfg, device
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Train EncodeProcessDecode model")
+    parser.add_argument('--config', type=str, default="train_config.yml", help="Path to the config YAML file")
+    args = parser.parse_args()
+
+    cfg = load_config(args.config)
+    model, optimizer, dataset, run_dir, model_dir, logs_dir, cfg, device = setup_training_environment(cfg)
+
+    train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device)
+
+if __name__ == "__main__":
+    main()
 

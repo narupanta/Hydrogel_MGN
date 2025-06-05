@@ -1,3 +1,4 @@
 output/*
 rollout/*
 dataset/*
+train_config.yml

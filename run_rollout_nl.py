@@ -20,78 +20,72 @@ import matplotlib.pyplot as plt
 import matplotlib.tri as tri
 
 device = "cuda"
-def run_step(model, graph) :
-    with torch.no_grad():
-        curr_temp = model.predict(graph.to(device))
-        graph.temperature = curr_temp
-        return graph
-
-def rollout(model, data, time_window):
-    data = [frame for frame in data]
+def rollout(model, data, time_window, device="cuda"):
+    """Roll out predictions by stepping `time_window` ahead at each iteration."""
+    data = list(data)
     initial_state = data[0]
     timesteps = len(data)
 
-    rmse_list = []
+    curr_graph = initial_state.clone()
+    pred_world_pos_list = [curr_graph.world_pos.to(device).unsqueeze(0)]
+    gt_world_pos_list = [curr_graph.world_pos.to(device).unsqueeze(0)]
+    pred_pvf_list = [curr_graph.pvf.to(device).unsqueeze(0)]
+    gt_pvf_list = [curr_graph.pvf.to(device).unsqueeze(0)]
 
-    curr_graph = initial_state.clone()  # Start with first ground truth graph
-    world_pos_mse_tensor = torch.zeros((1,), device = model._device)
-    pvf_mse_tensor = torch.zeros((1,), device = model._device)
-    pred_world_pos_list = [curr_graph.world_pos.to(model._device)]
-    gt_world_pos_list = [curr_graph.world_pos.to(model._device)]
-    pred_pvf_list = [curr_graph.pvf.to(model._device)]
-    gt_pvf_list = [curr_graph.pvf.to(model._device)]
-    progress = tqdm(range(0, timesteps - time_window, time_window), desc="Rollout")
+    disp_mse_list = []
+    pvf_mse_list = []
 
-    for t in progress: 
-        # === Predict next time_window temperatures ===
-        gt_world_pos = data[t].target_world_pos.to(device)
+    progress = tqdm(range(0, timesteps, time_window), desc="Rollout")
+
+    for t in progress:
+        # === Model predicts time_window steps ===
         with torch.no_grad():
-            pred_world_pos, pred_pvf = model.predict(curr_graph.to(device))  # (num_nodes, time_window)
-            # dirichlet_nodes = curr_graph.node_type == 1
-            # pred_world_pos[-1, dirichlet_nodes, :] = gt_world_pos[-1, dirichlet_nodes, :]
-            curr_graph.world_pos = pred_world_pos[-1, :, :].clone()
-            curr_graph.pvf = pred_pvf[-1, :, :].clone()  # use last timestep prediction for next input
+            pred_world_pos, pred_pvf = model.predict(curr_graph.to(device))
+            curr_graph.world_pos = pred_world_pos[-1]  # advance to last predicted
+            curr_graph.pvf = pred_pvf[-1]
 
-        # === Ground truth from data[t+1] to data[t+time_window] ===
-        gt_world_pos = data[t].target_world_pos.to(device)
-        gt_pvf = data[t].target_pvf.to(device)
-        window_world_pos_error = torch.sum((pred_world_pos - gt_world_pos) ** 2, dim = 2)
-        window_world_pos_mse = torch.mean(window_world_pos_error, dim = 1)
+        # === Get ground truth ===
+        if t < len(data):  # valid ground truth frame exists
+            gt_world_pos = data[t].target_world_pos.to(device)
+            gt_pvf = data[t].target_pvf.to(device)
 
-        window_pvf_error = torch.sum((pred_pvf - gt_pvf) ** 2, dim = 2)
-        window_pvf_mse = torch.mean(window_pvf_error, dim = 1)
+            # MSE over prediction window
+            world_pos_mse = ((pred_world_pos - gt_world_pos) ** 2).sum(dim=-1).mean(dim=-1)
+            pvf_mse = ((pred_pvf - gt_pvf) ** 2).sum(dim=-1).mean(dim=-1)
 
-        world_pos_mse_tensor = torch.cat([world_pos_mse_tensor, window_world_pos_mse])  # (time_window,)
-        pvf_mse_tensor = torch.cat([pvf_mse_tensor, window_pvf_mse])
-        
+            disp_mse_list.append(world_pos_mse)
+            pvf_mse_list.append(pvf_mse)
+
+            gt_world_pos_list.append(gt_world_pos)
+            gt_pvf_list.append(gt_pvf)
+
         pred_world_pos_list.append(pred_world_pos)
-        gt_world_pos_list.append(gt_world_pos)
-
         pred_pvf_list.append(pred_pvf)
-        gt_pvf_list.append(gt_pvf)
 
-        # print(f"[t={t}] | MSE: {torch.mean(window_world_pos_mse):.4f}")
+        progress.set_description(f"[t={t}] | disp_mse: {world_pos_mse.mean():.4e}")
 
-    return dict(
-        mesh_pos=initial_state.mesh_pos,
-        node_type=initial_state.node_type,
-        cells=initial_state.cells,
-        predict_displacement=pred_world_pos_list,
-        gt_displacement=gt_world_pos_list,
-        predict_pvf=pred_pvf_list,
-        gt_pvf=gt_pvf_list,
-        disp_mse = world_pos_mse_tensor,
-        pvf_mse = pvf_mse_tensor
-    )
+    return {
+        "mesh_pos": initial_state.mesh_pos,
+        "node_type": initial_state.node_type,
+        "cells": initial_state.cells,
+        "predict_displacement": torch.cat(pred_world_pos_list, dim=0),
+        "gt_displacement": torch.cat(gt_world_pos_list, dim=0),
+        "predict_pvf": torch.cat(pred_pvf_list, dim=0),
+        "gt_pvf": torch.cat(gt_pvf_list, dim=0),
+        "disp_mse": torch.cat(disp_mse_list),
+        "pvf_mse": torch.cat(pvf_mse_list),
+    }
+
 
 if __name__ == "__main__" :
     test_on = "nonlinear_poc"
-    data_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/dataset/nl_dataset"
+    # data_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/dataset/nl_dataset"
+    data_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/testcases"
     output_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/rollout/{test_on}"
     paraview_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/rollout/{test_on}"
-    time_window = 1
-    model_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/trained_model/2025-05-31T12h04m44s/model_checkpoint"
-    dataset = HydrogelNonLinearDataset(data_dir, add_targets= True, split_frames=True, add_noise = False, time_window=time_window)
+    time_window = 2
+    model_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/trained_model/2025-06-05T15h45m54s/model_checkpoint"
+    dataset = HydrogelNonLinearDataset(data_dir, add_targets= True, split_frames=True, add_noise = False, time_window=time_window, target_config = {"world_pos": {"noise": 0.000}, "pvf": {"noise": 0.000}})
     data = dataset[0]
     model = EncodeProcessDecode(node_feature_size = 5,
                                 mesh_edge_feature_size = 7,
