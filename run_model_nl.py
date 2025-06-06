@@ -33,7 +33,7 @@ def build_model(cfg, device):
     return model.to(device)
 
 
-def train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device):
+def train(model, train_dataset, val_dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device):
     logger_setup(os.path.join(logs_dir, "logs.txt"))
     logger = logging.getLogger()
 
@@ -52,7 +52,7 @@ def train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device):
         train_total_loss = 0
         logger.info(f"==== Epoch {epoch + 1} ====")
 
-        for traj_idx, trajectory in enumerate(dataset):
+        for traj_idx, trajectory in enumerate(train_dataset):
             traj_total_loss, traj_disp_loss, traj_pvf_loss = 0, 0, 0
             train_loader = DataLoader(trajectory, batch_size=1, shuffle=True)
             loop = tqdm(train_loader, leave=False)
@@ -89,7 +89,7 @@ def train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device):
         # === Validation ===
         if not is_accumulate_phase:
             val_total_loss = 0.0
-            for traj_idx, trajectory in enumerate(dataset):
+            for traj_idx, trajectory in enumerate(val_dataset):
                 output = rollout(model, trajectory, time_window)
                 disp_mse = torch.mean(output["disp_mse"])
                 pvf_mse = torch.mean(output["pvf_mse"])
@@ -100,8 +100,8 @@ def train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device):
                     f"Val Traj {traj_idx + 1}: Rollout MSE: {val_loss:.6e}, Disp MSE: {disp_mse:.6e}, PVF MSE: {pvf_mse:.6e}"
                 )
 
-            avg_train_loss = train_total_loss / len(dataset)
-            avg_val_loss = val_total_loss / len(dataset)
+            avg_train_loss = train_total_loss / len(train_dataset)
+            avg_val_loss = val_total_loss / len(val_dataset)
 
             logger.info(f"Epoch {epoch + 1} Summary - Train Loss: {avg_train_loss:.4f}, Val Loss: {avg_val_loss:.6e}")
             print(f"[Epoch {epoch + 1}/{num_epochs}] Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.6e}")
@@ -149,7 +149,7 @@ def setup_training_environment(cfg):
         with open(config_summary_path, "w") as f:
             yaml.dump(cfg, f, default_flow_style=False, sort_keys=False)
 
-    dataset = HydrogelNonLinearDataset(
+    train_dataset = HydrogelNonLinearDataset(
         paths["data_dir"],
         add_targets=True,
         split_frames=True,
@@ -158,6 +158,14 @@ def setup_training_environment(cfg):
         target_config=cfg["training"]["target_config"]
     )
 
+    val_dataset = HydrogelNonLinearDataset(
+        paths["data_dir"],
+        add_targets=True,
+        split_frames=True,
+        add_noise=False,
+        time_window=cfg["training"]["time_window"],
+        target_config = {"world_pos": {"noise": 0.000}, "pvf": {"noise": 0.000}}
+    )
     model = build_model(cfg, device)
     optimizer = torch.optim.Adam(
         model.parameters(),
@@ -169,7 +177,7 @@ def setup_training_environment(cfg):
     if paths.get("model_dir"):
         resumed = load_checkpoint_if_available(model, optimizer, model_dir)
 
-    return model, optimizer, dataset, run_dir, model_dir, logs_dir, cfg, device
+    return model, optimizer, train_dataset, val_dataset, run_dir, model_dir, logs_dir, cfg, device
 
 
 def main():
@@ -179,9 +187,9 @@ def main():
     args = parser.parse_args()
 
     cfg = load_config(args.config)
-    model, optimizer, dataset, run_dir, model_dir, logs_dir, cfg, device = setup_training_environment(cfg)
+    model, optimizer, train_dataset, val_dataset, run_dir, model_dir, logs_dir, cfg, device = setup_training_environment(cfg)
 
-    train(model, dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device)
+    train(model, train_dataset, val_dataset, optimizer, run_dir, model_dir, logs_dir, cfg, device)
 
 if __name__ == "__main__":
     main()

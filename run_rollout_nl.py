@@ -41,6 +41,7 @@ def rollout(model, data, time_window, device="cuda"):
         # === Model predicts time_window steps ===
         with torch.no_grad():
             pred_world_pos, pred_pvf = model.predict(curr_graph.to(device))
+            # pred_world_pos, pred_pvf = model.predict(data[t].to(device))
             curr_graph.world_pos = pred_world_pos[-1]  # advance to last predicted
             curr_graph.pvf = pred_pvf[-1]
 
@@ -68,9 +69,9 @@ def rollout(model, data, time_window, device="cuda"):
         "mesh_pos": initial_state.mesh_pos,
         "node_type": initial_state.node_type,
         "cells": initial_state.cells,
-        "predict_displacement": torch.cat(pred_world_pos_list, dim=0),
+        "predict_displacement": torch.cat(pred_world_pos_list, dim=0)[:timesteps],
         "gt_displacement": torch.cat(gt_world_pos_list, dim=0),
-        "predict_pvf": torch.cat(pred_pvf_list, dim=0),
+        "predict_pvf": torch.cat(pred_pvf_list, dim=0)[:timesteps],
         "gt_pvf": torch.cat(gt_pvf_list, dim=0),
         "disp_mse": torch.cat(disp_mse_list),
         "pvf_mse": torch.cat(pvf_mse_list),
@@ -83,8 +84,8 @@ if __name__ == "__main__" :
     data_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/testcases"
     output_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/rollout/{test_on}"
     paraview_dir = f"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/rollout/{test_on}"
-    time_window = 2
-    model_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/trained_model/2025-06-05T15h45m54s/model_checkpoint"
+    time_window = 5
+    model_dir = r"/mnt/c/Users/narun/OneDrive/Desktop/Project/Hydrogel_MGN/Hydrogel_MGN/trained_model/2025-06-05T16h36m55s/model_checkpoint"
     dataset = HydrogelNonLinearDataset(data_dir, add_targets= True, split_frames=True, add_noise = False, time_window=time_window, target_config = {"world_pos": {"noise": 0.000}, "pvf": {"noise": 0.000}})
     data = dataset[0]
     model = EncodeProcessDecode(node_feature_size = 5,
