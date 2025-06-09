@@ -3,3 +3,4 @@ rollout/*
 dataset/*
 trained_model/*
 train_config.yml
+slurm*
